@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çeteye Katıl - Esat Can Travel</title>
+    <link rel="stylesheet" href="assets/style-join.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+    <header class="menu-bar">
+        <div class="menu-container">
+            <div class="logo">
+                <a href="index.html" onclick="handleLogoClick(event)"><img src="assets/logo.svg" alt="Esat Can Travel Logo" id="menu-logo"></a>
+            </div>
+            <div class="hamburger" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li class="dropdown">
+                        <a href="index.html">Başlangıç</a>
+                        <div class="dropdown-content">
+                            <a href="selam.html">Selam!</a>
+                            <a href="manifesto.html">Manifesto</a>
+                            <a href="baslangic/bizimle-calisin.html">Benimle Çalışın</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="blog/index.html">Blog</a>
+                        <div class="dropdown-content">
+                            <a href="blog/butce-seyahati.html">Bütçe Seyahati</a>
+                            <a href="blog/kisisel-gelisim.html">Kişisel Gelişim</a>
+                            <a href="blog/calisma-ve-seyahat.html">Çalışma ve Seyahat</a>
+                            <a href="blog/yeni-gonderiler.html">Yeni Gönderiler</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="destinasyonlar/index.html">Destinasyonlar</a>
+                        <div class="dropdown-content">
+                            <div class="region-menu"><a href="#" class="region-link">Avrupa</a><div class="sub-menu"><a href="destinations/france/france.html">Fransa</a><a href="destinations/iceland/iceland.html">İzlanda</a><a href="destinations/italy/italy.html">İtalya</a><a href="destinations/spain/spain.html">İspanya</a><a href="destinations/uk/uk.html">Birleşik Krallık</a><a href="destinations/avrupa-daha-fazlasi.html">Avrupa'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Güneydoğu Asya</a><div class="sub-menu"><a href="destinations/indonesia/indonesia.html">Endonezya</a><a href="destinations/myanmar/myanmar.html">Myanmar</a><a href="destinations/philippines/philippines.html">Filipinler</a><a href="destinations/thailand/thailand.html">Tayland</a><a href="destinations/vietnam/vietnam.html">Vietnam</a><a href="destinations/guneydogu-asya-daha-fazlasi.html">Güneydoğu Asya'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Güney Amerika</a><div class="sub-menu"><a href="destinations/argentina/argentina.html">Arjantin</a><a href="destinations/brazil/brazil.html">Brezilya</a><a href="destinations/colombia/colombia.html">Kolombiya</a><a href="destinations/ecuador/ecuador.html">Ekvador</a><a href="destinations/peru/peru.html">Peru</a><a href="destinations/guney-amerika-daha-fazlasi.html">Güney Amerika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Orta Amerika</a><div class="sub-menu"><a href="destinations/belize/belize.html">Belize</a><a href="destinations/costa-rica/costa-rica.html">Kosta Rika</a><a href="destinations/cuba/cuba.html">Küba</a><a href="destinations/guatemala/guatemala.html">Guatemala</a><a href="destinations/panama/panama.html">Panama</a><a href="destinations/orta-amerika-daha-fazlasi.html">Orta Amerika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Asya</a><div class="sub-menu"><a href="destinations/india/india.html">Hindistan</a><a href="destinations/japan/japan.html">Japonya</a><a href="destinations/pakistan/pakistan.html">Pakistan</a><a href="destinations/south-korea/south-korea.html">Güney Kore</a><a href="destinations/sri-lanka/sri-lanka.html">Sri Lanka</a><a href="destinations/asya-daha-fazlasi.html">Asya'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Kuzey Amerika</a><div class="sub-menu"><a href="destinations/canada/canada.html">Kanada</a><a href="destinations/mexico/mexico.html">Meksika</a><a href="destinations/usa/usa.html">Amerika</a><a href="destinations/kuzey-amerika-daha-fazlasi.html">Kuzey Amerika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Okyanusya</a><div class="sub-menu"><a href="destinations/australia/australia.html">Avustralya</a><a href="destinations/new-zealand/new-zealand.html">Yeni Zelanda</a><a href="destinations/pacific-islands/pacific-islands.html">Pasifik Adaları</a><a href="destinations/okyanusya-daha-fazlasi.html">Okyanusya'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Afrika</a><div class="sub-menu"><a href="destinations/morocco/morocco.html">Fas</a><a href="destinations/mozambique/mozambique.html">Mozambik</a><a href="destinations/namibia/namibia.html">Namibya</a><a href="destinations/south-africa/south-africa.html">Güney Afrika</a><a href="destinations/tanzania/tanzania.html">Tanzanya</a><a href="destinations/afrika-daha-fazlasi.html">Afrika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Orta Doğu</a><div class="sub-menu"><a href="destinations/egypt/egypt.html">Mısır</a><a href="destinations/iran/iran.html">İran</a><a href="destinations/israel/israel.html">İsrail</a><a href="destinations/lebanon/lebanon.html">Lübnan</a><a href="destinations/turkey/turkey.html">Türkiye</a><a href="destinations/orta-dogu-daha-fazlasi.html">Orta Doğu'nun daha fazlası</a></div></div>
+                        </div>
+                    </li>
+                    <li><a href="seyahat-ekipmani/index.html">Seyahat Ekipmanı</a></li>
+                    <li class="dropdown">
+                        <a href="kaynaklar/index.html">Kaynaklar</a>
+                        <div class="dropdown-content">
+                            <a href="kaynaklar/seyahat-sigortasi.html">Seyahat Sigortası</a>
+                            <a href="kaynaklar/esimler.html">eSIM'ler</a>
+                            <a href="kaynaklar/seyahat-bankalari.html">Seyahat Bankaları</a>
+                        </div>
+                    </li>
+                    <li><a href="kurslar/index.html">Kurslar</a></li>
+                </ul>
+            </nav>
+            <div class="right-section">
+                <a href="join.html" class="join-btn">Çeteye Katıl</a>
+                <img src="assets/search.svg" alt="Search" class="search-icon" onclick="toggleSearch()">
+            </div>
+        </div>
+        <div class="search-bar" id="search-bar" style="display: none;">
+            <form id="search-form" onsubmit="handleSearch(event)">
+                <input type="text" placeholder="Blogda ara..." id="search-input" oninput="suggestKeywords()">
+                <div id="suggestions" class="suggestions-box"></div>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <!-- div1: Hero bölümü -->
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1 class="welcome-text">Dünyayı Cebinde Kuruşla Gezmenin Püf Noktaları!</h1>
+                <h2>Esat Can Travel ile Macera Dolu Bir Topluluğun Parçası Ol!</h2>
+                <p>Merhaba gezgin ruh! İlk kez sırt çantanı kapıp yola çıkmak biraz göz korkutucu olabilir, biliyorum. Ama merak etme, Esat Can Travel’ın <strong>Dünyayı Ucuza Gezme Rehberi</strong> ile her şey çok kolay olacak!</p>
+                <form class="subscription-form" id="subscription-form" onsubmit="handleSubscription(event)">
+                    <input type="text" placeholder="Adın" name="name" required>
+                    <input type="email" placeholder="E-postan" name="email" required>
+                    <button type="submit">Rehberi Ücretsiz Al!</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- İçerik Bölümü -->
+        <section class="join-content">
+            <div class="intro-text">
+                <p>Bu rehber, cebin rahat, kalbin mutlu şekilde dünyayı dolaşman için yılların tecrübesini samimi bir dille sana sunuyor. Bu sadece parasız gezginler için değil, herkes için bir hazine! Yıllardır yollarda öğrendiğim her şeyi, sıcacık hikayelerle ve pratik tüyolarla bu rehberde topladım. Kendi maceranı yaşamaya hazır mısın?</p>
+            </div>
+
+            <div class="benefits-section">
+                <h2>Neler mi bulacaksın?</h2>
+                <ul class="benefits-list">
+                    <li><span class="bullet">✨</span> 10+ yıllık gezgin tecrübem</li>
+                    <li><span class="bullet">✨</span> 250+ sayfa dolusu ilham ve tüyo</li>
+                    <li><span class="bullet">✨</span> Sınırlı bir süre <strong>ÜCRETSİZ</strong> (kaçırma!)</li>
+                    <li><span class="bullet">✨</span> Samimi, içten öneriler</li>
+                    <li><span class="bullet">✨</span> Kahkaha attıran yol anıları</li>
+                </ul>
+            </div>
+
+            <div class="learn-section">
+                <h2>Neler mi öğreneceksin?</h2>
+                <div class="learn-grid">
+                    <div class="learn-item"><img src="assets/ceteye-katil/1.png" alt="Icon 1"></div>
+                    <div class="learn-item"><img src="assets/ceteye-katil/2.png" alt="Icon 2"></div>
+                    <div class="learn-item"><img src="assets/ceteye-katil/3.png" alt="Icon 3"></div>
+                    <div class="learn-item"><img src="assets/ceteye-katil/4.png" alt="Icon 4"></div>
+                    <div class="learn-item"><img src="assets/ceteye-katil/5.png" alt="Icon 5"></div>
+                    <div class="learn-item"><img src="assets/ceteye-katil/6.png" alt="Icon 6"></div>
+                </div>
+            </div>
+
+            <div class="roadmap-section">
+                <h2>Maceran İçin Esat’tan Yol Haritası</h2>
+                <div class="roadmap-grid">
+                    <div class="roadmap-item">
+                        <img src="assets/ceteye-katil/map.webp" alt="Map">
+                        <h3>Hadi Yola Çıkalım!</h3>
+                        <p>“Yapamam, edemem” diye düşünme! Aile, iş, para, ne seni durduruyorsa, hepsini aşmanın yollarını anlatıyorum. Sana şunu garanti ediyorum: Şu an tam da dünyayı gezme zamanın!</p>
+                    </div>
+                    <div class="roadmap-item">
+                        <img src="assets/ceteye-katil/beach.webp" alt="Beach">
+                        <h3>İlham Dolu Rotalar</h3>
+                        <p>Haydi, hayal kurmaya başla! Cebine dost, ruhuna şenlik yerleri göstereceğim. Yeni başlayanlar için kolay rotalar, gezgin kurtlar için çılgın öneriler…</p>
+                    </div>
+                    <div class="roadmap-item">
+                        <img src="assets/ceteye-katil/ticket.webp" alt="Ticket">
+                        <h3>Plan Yapmadan Plan Yap</h3>
+                        <p>En güzel plan, esnek olanı! Sana uygulamalar, vize tüyoları, rehberler ve gezgin muhabbetleriyle dolu bir hazırlık rehberi vereceğim.</p>
+                    </div>
+                    <div class="roadmap-item">
+                        <img src="assets/ceteye-katil/finance.webp" alt="Finance">
+                        <h3>Para mı? O da Ne!</h3>
+                        <p>Cebinde az parayla dünyayı gezmek mümkün! Seyahatten önce nasıl para biriktirilir, yolda nasıl tasarruf edilir, hepsini anlatıyorum.</p>
+                    </div>
+                    <div class="roadmap-item">
+                        <img src="assets/ceteye-katil/plane.webp" alt="Plane">
+                        <h3>Esat’ın Gezgin Hileleri</h3>
+                        <p>Yolda para ve zaman kazandıran süper tüyolarımı açıklıyorum. Bunlar öyle şeyler ki, başka yerde bulamazsın!</p>
+                    </div>
+                    <div class="roadmap-item">
+                        <img src="assets/ceteye-katil/backpack.webp" alt="Backpack">
+                        <h3>Çantana Ne Koyacaksın?</h3>
+                        <p>Az eşya, çok özgürlük! Neleri alman, neleri evde bırakman gerektiğini anlatıyorum. Her macera için checklist’ler benden!</p>
+                    </div>
+                    <div class="roadmap-item">
+                        <img src="assets/ceteye-katil/sos.webp" alt="SOS">
+                        <h3>Güvende Kal, Keyfine Bak</h3>
+                        <p>Seyahat etmek süper güvenli, ama birkaç tüyo ile daha da rahat edersin. Kadın gezginler için de özel önerilerim var!</p>
+                    </div>
+                    <div class="roadmap-item">
+                        <img src="assets/ceteye-katil/swimmer.webp" alt="Swimmer">
+                        <h3>Sağlıkla Gez, Mutlu Gez</h3>
+                        <p>Hasta hasta gezmek olmaz! Yemekten spora, aşıdan günlük rutine, sağlıklı kalmanın yollarını paylaşıyorum.</p>
+                    </div>
+                    <div class="roadmap-item">
+                        <img src="assets/ceteye-katil/couples.webp" alt="Couples">
+                        <h3>Yeni Dostlar, Yeni Aşklar</h3>
+                        <p>“Yabancı yerde insanlarla nasıl konuşurum?” Merak etme, herkesle muhabbet başlatmanın sırrını vereceğim.</p>
+                    </div>
+                    <div class="roadmap-item">
+                        <img src="assets/ceteye-katil/backpacker.webp" alt="Backpacker">
+                        <h3>Yalnız mısın? Asla!</h3>
+                        <p>Tek başına gezmek özgürlüğün kralı! Yolda proje geliştirip para kazanma fikirleriyle yalnızken bile keyif alırsın.</p>
+                    </div>
+                    <div class="roadmap-item">
+                        <img src="assets/ceteye-katil/world.webp" alt="World">
+                        <h3>Sonsuz Gezgin Olmak İster misin?</h3>
+                        <p>Sürekli gezmenin yollarını, dijital göçebe hayatını ve özgür bir yaşamın sırlarını paylaşıyorum. Hazır mısın?</p>
+                    </div>
+                    <div class="roadmap-item">
+                        <img src="assets/ceteye-katil/cloud.webp" alt="Cloud">
+                        <h3>Eve Dönüş</h3>
+                        <p>Eve dönmek garip hissettirebilir, ama korkma! Ters kültür şokuyla nasıl başa çıkarsın, hepsini konuşalım.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <p><strong>Esat Can Travel</strong> ile dünyayı gezmek artık hayal değil, gerçek! Bu rehberi kap, sırt çantanı hazırla ve yola çık. Macera seni bekliyor!</p>
+                <a href="#subscription-form" class="cta-btn">Rehberi Ücretsiz Al!</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="assets/logowhite.svg" alt="Esat Can Travel Logo">
+            </div>
+            <div class="footer-links">
+                <h3>Bağlantılar</h3>
+                <ul>
+                    <li><a href="index.html">Anasayfa</a></li>
+                    <li><a href="blog/index.html">Blog</a></li>
+                    <li><a href="destinasyonlar/index.html">Destinasyonlar</a></li>
+                    <li><a href="seyahat-ekipmani/index.html">Seyahat Ekipmanı</a></li>
+                    <li><a href="kaynaklar/index.html">Kaynaklar</a></li>
+                    <li><a href="kurslar/index.html">Kurslar</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Bizi Takip Et</h3>
+                <a href="https://instagram.com/esat.can"><img src="assets/instagram-white.svg" alt="Instagram"></a>
+                <a href="https://x.com/esatcaan"><img src="assets/twitter-white.svg" alt="Twitter"></a>
+                <a href="https://facebook.com/esatcann"><img src="assets/facebook-white.svg" alt="Facebook"></a>
+            </div>
+            <div class="footer-contact">
+                <h3>İletişim</h3>
+                <p>E-posta: <a href="mailto:info@esatcantravel.com">info@esatcantravel.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Esat Can Travel. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="assets/script-join.js"></script>
+</body>
+</html>
