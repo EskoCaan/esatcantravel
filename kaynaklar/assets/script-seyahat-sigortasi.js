@@ -56,10 +56,10 @@ function suggestKeywords() {
     }
 
     const blogContent = [
-        { title: "Bütçe Seyahati Tüyoları", url: "file:///Users/esat/Desktop/Websitem/blog/butce-seyahati.html", keywords: ["bütçe", "seyahat", "ucuz", "tüyolar"] },
-        { title: "Kişisel Gelişim ve Seyahat", url: "file:///Users/esat/Desktop/Websitem/blog/kisisel-gelisim.html", keywords: ["kişisel gelişim", "seyahat", "motivasyon"] },
-        { title: "Çalışırken Seyahat Etme", url: "file:///Users/esat/Desktop/Websitem/blog/calisma-ve-seyahat.html", keywords: ["çalışma", "seyahat", "dijital göçebe"] },
-        { title: "Yeni Gönderiler", url: "file:///Users/esat/Desktop/Websitem/blog/yeni-gonderiler.html", keywords: ["yeni", "gönderiler", "blog"] }
+        { title: "Bütçe Seyahati Tüyoları", url: "../blog/butce-seyahati.html", keywords: ["bütçe", "seyahat", "ucuz", "tüyolar"] },
+        { title: "Kişisel Gelişim ve Seyahat", url: "../blog/kisisel-gelisim.html", keywords: ["kişisel gelişim", "seyahat", "motivasyon"] },
+        { title: "Çalışırken Seyahat Etme", url: "../blog/calisma-ve-seyahat.html", keywords: ["çalışma", "seyahat", "dijital göçebe"] },
+        { title: "Yeni Gönderiler", url: "../blog/yeni-gonderiler.html", keywords: ["yeni", "gönderiler", "blog"] }
     ];
 
     const suggestions = blogContent.filter(item => 
@@ -86,14 +86,14 @@ function handleSearch(event) {
     event.preventDefault();
     const query = document.getElementById('search-input').value.trim();
     if (query) {
-        window.location.href = `file:///Users/esat/Desktop/Websitem/blog/index.html?search=${encodeURIComponent(query)}`;
+        window.location.href = `../blog/index.html?search=${encodeURIComponent(query)}`;
     }
 }
 
 /* Logo tıklama */
 function handleLogoClick(event) {
     event.preventDefault();
-    window.location.href = 'file:///Users/esat/Desktop/Websitem/index.html';
+    window.location.href = '../index.html';
 }
 
 /* Dropdown menü olayları */
@@ -259,88 +259,83 @@ function setupAnimations() {
     });
 }
 
-/* Fiyat hesaplama formu */
-const form = document.querySelector('.price-calc-form');
-const resultDiv = document.querySelector('.price-result');
-const calculatedPrice = document.getElementById('calculated-price');
-
-// Ülkeleri risk seviyelerine göre gruplandırma
-const riskLevels = {
-    lowRisk: [
-        'australia', 'austria', 'belgium', 'canada', 'cyprus', 'czech-republic', 'denmark', 'estonia',
-        'finland', 'france', 'germany', 'greece', 'hungary', 'iceland', 'ireland', 'italy', 'japan',
-        'korea-south', 'latvia', 'liechtenstein', 'lithuania', 'luxembourg', 'malta', 'monaco', 'netherlands',
-        'new-zealand', 'norway', 'poland', 'portugal', 'singapore', 'slovakia', 'slovenia', 'spain',
-        'sweden', 'switzerland', 'united-arab-emirates', 'united-kingdom', 'united-states', 'vatican-city'
-    ],
-    mediumRisk: [
-        'albania', 'andorra', 'argentina', 'armenia', 'azerbaijan', 'bahamas', 'bahrain', 'barbados',
-        'belarus', 'belize', 'bhutan', 'bolivia', 'bosnia-and-herzegovina', 'botswana', 'brazil', 'brunei',
-        'bulgaria', 'cabo-verde', 'cambodia', 'chile', 'china', 'colombia', 'costa-rica', 'croatia',
-        'cuba', 'dominica', 'dominican-republic', 'east-timor', 'ecuador', 'egypt', 'el-salvador', 'fiji',
-        'georgia', 'ghana', 'grenada', 'guatemala', 'guyana', 'honduras', 'india', 'indonesia',
-        'israel', 'jamaica', 'jordan', 'kazakhstan', 'kenya', 'kosovo', 'kuwait', 'kyrgyzstan',
-        'laos', 'malaysia', 'maldives', 'mauritius', 'mexico', 'moldova', 'mongolia', 'montenegro',
-        'morocco', 'namibia', 'nepal', 'north-macedonia', 'oman', 'panama', 'paraguay', 'peru',
-        'philippines', 'qatar', 'romania', 'russia', 'rwanda', 'saint-kitts-and-nevis', 'saint-lucia',
-        'saint-vincent-and-the-grenadines', 'samoa', 'san-marino', 'saudi-arabia', 'serbia', 'seychelles',
-        'south-africa', 'sri-lanka', 'suriname', 'taiwan', 'tajikistan', 'tanzania', 'thailand',
-        'trinidad-and-tobago', 'tunisia', 'turkey', 'turkmenistan', 'ukraine', 'uruguay', 'uzbekistan',
-        'vietnam'
-    ],
-    highRisk: [
-        'afghanistan', 'algeria', 'angola', 'bangladesh', 'benin', 'burkina-faso', 'burundi', 'cameroon',
-        'central-african-republic', 'chad', 'comoros', 'congo', 'djibouti', 'equatorial-guinea', 'eritrea',
-        'eswatini', 'ethiopia', 'gabon', 'gambia', 'guinea', 'guinea-bissau', 'haiti', 'iran',
-        'iraq', 'ivory-coast', 'kiribati', 'korea-north', 'lebanon', 'lesotho', 'liberia', 'libya',
-        'madagascar', 'malawi', 'mali', 'marshall-islands', 'mauritania', 'micronesia', 'mozambique', 'myanmar',
-        'nauru', 'niger', 'nigeria', 'pakistan', 'palau', 'papua-new-guinea', 'sao-tome-and-principe', 'senegal',
-        'sierra-leone', 'solomon-islands', 'somalia', 'south-sudan', 'sudan', 'syria', 'togo', 'tonga',
-        'tuvalu', 'uganda', 'vanuatu', 'venezuela', 'yemen', 'zambia', 'zimbabwe'
-    ]
-};
-
-// Fiyat hesaplama fonksiyonu
-function calculatePrice(destination, duration, age) {
-    let basePrice = 50; // Temel fiyat (TRY)
-
-    // Risk seviyesine göre fiyat çarpanı
-    let riskMultiplier = 1;
-    if (riskLevels.lowRisk.includes(destination)) {
-        riskMultiplier = 1;
-    } else if (riskLevels.mediumRisk.includes(destination)) {
-        riskMultiplier = 1.5;
-    } else if (riskLevels.highRisk.includes(destination)) {
-        riskMultiplier = 2;
-    }
-
-    // Süreye göre çarpan (her 7 gün için ek maliyet)
-    const durationFactor = 1 + (duration / 7) * 0.2;
-
-    // Yaşa göre çarpan
-    let ageFactor = 1;
-    if (age >= 60) {
-        ageFactor = 1.5;
-    } else if (age >= 40) {
-        ageFactor = 1.2;
-    }
-
-    // Toplam fiyat hesaplama
-    const totalPrice = basePrice * riskMultiplier * durationFactor * ageFactor;
-    return Math.round(totalPrice);
-}
-
-// Form gönderimi
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
+/* Fiyat hesaplama fonksiyonu */
+function handlePriceCalculation() {
     const destination = document.getElementById('destination').value;
     const duration = parseInt(document.getElementById('duration').value);
     const age = parseInt(document.getElementById('age').value);
+    const resultDiv = document.querySelector('.price-result');
+    const calculatedPrice = document.getElementById('calculated-price');
 
     if (!destination || !duration || !age) {
         alert('Lütfen tüm alanları doldurun.');
         return;
+    }
+
+    // Ülkeleri risk seviyelerine göre gruplandırma
+    const riskLevels = {
+        lowRisk: [
+            'australia', 'austria', 'belgium', 'canada', 'cyprus', 'czech-republic', 'denmark', 'estonia',
+            'finland', 'france', 'germany', 'greece', 'hungary', 'iceland', 'ireland', 'italy', 'japan',
+            'korea-south', 'latvia', 'liechtenstein', 'lithuania', 'luxembourg', 'malta', 'monaco', 'netherlands',
+            'new-zealand', 'norway', 'poland', 'portugal', 'singapore', 'slovakia', 'slovenia', 'spain',
+            'sweden', 'switzerland', 'united-arab-emirates', 'united-kingdom', 'united-states', 'vatican-city'
+        ],
+        mediumRisk: [
+            'albania', 'andorra', 'argentina', 'armenia', 'azerbaijan', 'bahamas', 'bahrain', 'barbados',
+            'belarus', 'belize', 'bhutan', 'bolivia', 'bosnia-and-herzegovina', 'botswana', 'brazil', 'brunei',
+            'bulgaria', 'cabo-verde', 'cambodia', 'chile', 'china', 'colombia', 'costa-rica', 'croatia',
+            'cuba', 'dominica', 'dominican-republic', 'east-timor', 'ecuador', 'egypt', 'el-salvador', 'fiji',
+            'georgia', 'ghana', 'grenada', 'guatemala', 'guyana', 'honduras', 'india', 'indonesia',
+            'israel', 'jamaica', 'jordan', 'kazakhstan', 'kenya', 'kosovo', 'kuwait', 'kyrgyzstan',
+            'laos', 'malaysia', 'maldives', 'mauritius', 'mexico', 'moldova', 'mongolia', 'montenegro',
+            'morocco', 'namibia', 'nepal', 'north-macedonia', 'oman', 'panama', 'paraguay', 'peru',
+            'philippines', 'qatar', 'romania', 'russia', 'rwanda', 'saint-kitts-and-nevis', 'saint-lucia',
+            'saint-vincent-and-the-grenadines', 'samoa', 'san-marino', 'saudi-arabia', 'serbia', 'seychelles',
+            'south-africa', 'sri-lanka', 'suriname', 'taiwan', 'tajikistan', 'tanzania', 'thailand',
+            'trinidad-and-tobago', 'tunisia', 'turkey', 'turkmenistan', 'ukraine', 'uruguay', 'uzbekistan',
+            'vietnam'
+        ],
+        highRisk: [
+            'afghanistan', 'algeria', 'angola', 'bangladesh', 'benin', 'burkina-faso', 'burundi', 'cameroon',
+            'central-african-republic', 'chad', 'comoros', 'congo', 'djibouti', 'equatorial-guinea', 'eritrea',
+            'eswatini', 'ethiopia', 'gabon', 'gambia', 'guinea', 'guinea-bissau', 'haiti', 'iran',
+            'iraq', 'ivory-coast', 'kiribati', 'korea-north', 'lebanon', 'lesotho', 'liberia', 'libya',
+            'madagascar', 'malawi', 'mali', 'marshall-islands', 'mauritania', 'micronesia', 'mozambique', 'myanmar',
+            'nauru', 'niger', 'nigeria', 'pakistan', 'palau', 'papua-new-guinea', 'sao-tome-and-principe', 'senegal',
+            'sierra-leone', 'solomon-islands', 'somalia', 'south-sudan', 'sudan', 'syria', 'togo', 'tonga',
+            'tuvalu', 'uganda', 'vanuatu', 'venezuela', 'yemen', 'zambia', 'zimbabwe'
+        ]
+    };
+
+    // Fiyat hesaplama fonksiyonu
+    function calculatePrice(destination, duration, age) {
+        let basePrice = 50; // Temel fiyat (TRY)
+
+        // Risk seviyesine göre fiyat çarpanı
+        let riskMultiplier = 1;
+        if (riskLevels.lowRisk.includes(destination)) {
+            riskMultiplier = 1;
+        } else if (riskLevels.mediumRisk.includes(destination)) {
+            riskMultiplier = 1.5;
+        } else if (riskLevels.highRisk.includes(destination)) {
+            riskMultiplier = 2;
+        }
+
+        // Süreye göre çarpan (her 7 gün için ek maliyet)
+        const durationFactor = 1 + (duration / 7) * 0.2;
+
+        // Yaşa göre çarpan
+        let ageFactor = 1;
+        if (age >= 60) {
+            ageFactor = 1.5;
+        } else if (age >= 40) {
+            ageFactor = 1.2;
+        }
+
+        // Toplam fiyat hesaplama
+        const totalPrice = basePrice * riskMultiplier * durationFactor * ageFactor;
+        return Math.round(totalPrice);
     }
 
     const price = calculatePrice(destination, duration, age);
@@ -356,7 +351,7 @@ form.addEventListener('submit', (e) => {
         y: 0, 
         duration: 0.5 
     });
-});
+}
 
 /* VanillaTilt Efektleri */
 function setupTiltEffects() {
