@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manifestomuz - Esat Can Travel</title>
+    <link rel="stylesheet" href="assets/manifesto/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+    <header class="menu-bar">
+        <div class="menu-container">
+            <div class="logo">
+                <a href="index.html" onclick="handleLogoClick(event)">
+                    <img src="assets/logo.svg" alt="Esat Can Travel Logo" id="menu-logo">
+                </a>
+            </div>
+            <div class="hamburger" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li class="dropdown">
+                        <a href="index.html">Başlangıç</a>
+                        <div class="dropdown-content">
+                            <a href="selam.html">Selam!</a>
+                            <a href="manifesto.html">Manifesto</a>
+                            <a href="baslangic/bizimle-calisin.html">Benimle Çalışın</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="blog/index.html">Blog</a>
+                        <div class="dropdown-content">
+                            <a href="blog/butce-seyahati.html">Bütçe Seyahati</a>
+                            <a href="blog/kisisel-gelisim.html">Kişisel Gelişim</a>
+                            <a href="blog/calisma-ve-seyahat.html">Çalışma ve Seyahat</a>
+                            <a href="blog/yeni-gonderiler.html">Yeni Gönderiler</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="destinasyonlar/index.html">Destinasyonlar</a>
+                        <div class="dropdown-content">
+                            <div class="region-menu"><a href="#" class="region-link">Avrupa</a><div class="sub-menu"><a href="destinations/france/france.html">Fransa</a><a href="destinations/iceland/iceland.html">İzlanda</a><a href="destinations/italy/italy.html">İtalya</a><a href="destinations/spain/spain.html">İspanya</a><a href="destinations/uk/uk.html">Birleşik Krallık</a><a href="destinations/avrupa-daha-fazlasi.html">Avrupa'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Güneydoğu Asya</a><div class="sub-menu"><a href="destinations/indonesia/indonesia.html">Endonezya</a><a href="destinations/myanmar/myanmar.html">Myanmar</a><a href="destinations/philippines/philippines.html">Filipinler</a><a href="destinations/thailand/thailand.html">Tayland</a><a href="destinations/vietnam/vietnam.html">Vietnam</a><a href="destinations/guneydogu-asya-daha-fazlasi.html">Güneydoğu Asya'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Güney Amerika</a><div class="sub-menu"><a href="destinations/argentina/argentina.html">Arjantin</a><a href="destinations/brazil/brazil.html">Brezilya</a><a href="destinations/colombia/colombia.html">Kolombiya</a><a href="destinations/ecuador/ecuador.html">Ekvador</a><a href="destinations/peru/peru.html">Peru</a><a href="destinations/guney-amerika-daha-fazlasi.html">Güney Amerika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Orta Amerika</a><div class="sub-menu"><a href="destinations/belize/belize.html">Belize</a><a href="destinations/costa-rica/costa-rica.html">Kosta Rika</a><a href="destinations/cuba/cuba.html">Küba</a><a href="destinations/guatemala/guatemala.html">Guatemala</a><a href="destinations/panama/panama.html">Panama</a><a href="destinations/orta-amerika-daha-fazlasi.html">Orta Amerika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Asya</a><div class="sub-menu"><a href="destinations/india/india.html">Hindistan</a><a href="destinations/japan/japan.html">Japonya</a><a href="destinations/pakistan/pakistan.html">Pakistan</a><a href="destinations/south-korea/south-korea.html">Güney Kore</a><a href="destinations/sri-lanka/sri-lanka.html">Sri Lanka</a><a href="destinations/asya-daha-fazlasi.html">Asya'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Kuzey Amerika</a><div class="sub-menu"><a href="destinations/canada/canada.html">Kanada</a><a href="destinations/mexico/mexico.html">Meksika</a><a href="destinations/usa/usa.html">Amerika</a><a href="destinations/kuzey-amerika-daha-fazlasi.html">Kuzey Amerika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Okyanusya</a><div class="sub-menu"><a href="destinations/australia/australia.html">Avustralya</a><a href="destinations/new-zealand/new-zealand.html">Yeni Zelanda</a><a href="destinations/pacific-islands/pacific-islands.html">Pasifik Adaları</a><a href="destinations/okyanusya-daha-fazlasi.html">Okyanusya'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Afrika</a><div class="sub-menu"><a href="destinations/morocco/morocco.html">Fas</a><a href="destinations/mozambique/mozambique.html">Mozambik</a><a href="destinations/namibia/namibia.html">Namibya</a><a href="destinations/south-africa/south-africa.html">Güney Afrika</a><a href="destinations/tanzania/tanzania.html">Tanzanya</a><a href="destinations/afrika-daha-fazlasi.html">Afrika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Orta Doğu</a><div class="sub-menu"><a href="destinations/egypt/egypt.html">Mısır</a><a href="destinations/iran/iran.html">İran</a><a href="destinations/israel/israel.html">İsrail</a><a href="destinations/lebanon/lebanon.html">Lübnan</a><a href="destinations/turkey/turkey.html">Türkiye</a><a href="destinations/orta-dogu-daha-fazlasi.html">Orta Doğu'nun daha fazlası</a></div></div>
+                        </div>
+                    </li>
+                    <li><a href="seyahat-ekipmani/index.html">Seyahat Ekipmanı</a></li>
+                    <li class="dropdown">
+                        <a href="kaynaklar/index.html">Kaynaklar</a>
+                        <div class="dropdown-content">
+                            <a href="kaynaklar/seyahat-sigortasi.html">Seyahat Sigortası</a>
+                            <a href="kaynaklar/esimler.html">eSIM'ler</a>
+                            <a href="kaynaklar/seyahat-bankalari.html">Seyahat Bankaları</a>
+                        </div>
+                    </li>
+                    <li><a href="kurslar/index.html">Kurslar</a></li>
+                </ul>
+            </nav>
+            <div class="right-section">
+                <a href="join.html" class="join-btn">Çeteye Katıl</a>
+                <img src="assets/search.svg" alt="Search" class="search-icon" onclick="toggleSearch()">
+            </div>
+        </div>
+        <div class="search-bar" id="search-bar" style="display: none;">
+            <form id="search-form" onsubmit="handleSearch(event)">
+                <input type="text" placeholder="Blogda ara..." id="search-input" oninput="suggestKeywords()">
+                <div id="suggestions" class="suggestions-box"></div>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Bölümü -->
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1 class="welcome-text">Hanımlar… Beyler… İşte karşınızda…</h1>
+                <h2>Esat Can Travel Manifestosu</h2>
+                <h3>Yoldaki Karanlığı Aydınlatan Rehberin</h3>
+                <p>Merhaba yol arkadaşım! Esat Can Travel olarak sana dünyayı cebinde az parayla, ama kalbinde kocaman bir özgürlükle gezmenin manifestosunu sunuyorum. Bu manifesto, sadece bir rehber değil; yolda kaybolduğunda, cesaretin azaldığında ya da “acaba mı?” dediğinde sana ışık olacak bir dost.</p>
+                <p>Ben, Esat, yıllardır yolların tozunu yutuyorum. Öğrendiğim her şeyi, yaşadığım her macerayı samimi bir şekilde seninle paylaşıyorum. Bu manifesto, Esat Can Travel’ın ruhunu yansıtıyor: <strong>Özgür ol, cesur ol, azla çok yap!</strong></p>
+            </div>
+        </div>
+
+        <!-- İçerik Bölümü -->
+        <section class="manifesto-content">
+            <!-- Div 1 -->
+            <div class="intro-section">
+                <p>Hayatın yollarında gezinirken sana rehber olacak birkaç düstur paylaşmak istiyorum. Seyahat, eğer kendini geliştirmeye kararlıysan, inanılmaz fırsatlarla dolu bir macera. Bu manifesto, Esat Can Travel olarak benim ve yol arkadaşlarımın yaşadıklarından damıtılmış bir özet. Ama şunu baştan söyleyeyim, herkesin kalbine tam uyan bir manifesto yazmak imkânsız.</p>
+                <p>Belki burada yazan bazı şeyler sana “tam benlik değil” gibi gelecek. Ve bu hiç sorun değil, aksine süper! Bunu bir işaret say, otur ve kendi manifestonu yaz. Hayatta neye değer verdiğini bulmak, büyümenin en güzel adımı. Bu değerler, zor günlerinde sana sağlam bir dayanak olacak. Bu manifesto, saatlerce kafa patlatıp, yürekten muhabbetlerle ortaya çıktı. Hepimiz bu işle gurur duyuyoruz; umarım sen de bu satırlarda kendine bir şeyler bulursun.</p>
+            </div>
+
+            <!-- Div 2 -->
+            <div class="values-section">
+                <div class="initial-text" onmouseover="showValuesContent()">
+                    <p class="highlight-text"><strong>Kim olmak istediğine karar ver.</strong></p>
+                    <p class="highlight-text"><strong>Kendine karşı dürüst ol, anı yaşa.</strong></p>
+                    <p class="highlight-text"><strong>Hedeflerine doğru durmadan yürü.</strong></p>
+                    <p class="highlight-text"><strong>Elindekilere ve yaşadıklarına şükret.</strong></p>
+                    <p class="highlight-text"><strong>Ve sakın unutma…</strong></p>
+                </div>
+                <div class="values-content">
+                    <p class="final-text">İşte karşında, dostum: Esat Can Travel Manifestosu.</p>
+                    <div class="values-details">
+                        <div class="left-content">
+                            <p>Bu ilkeler, Esat Can Travel’ın ruhunu yansıtır ve gerçek bir gezgin olmanın ne demek olduğunu anlatır. Bunlar, yıllarca sırt çantasıyla dünyayı dolaşırken, macera üstüne macera yaşarken öğrendiğimiz şeyler. Kendi değerlerini belirlemek, inanılmaz güçlü bir adım. Ve işte bu manifesto, bunun sonucu.</p>
+                            <p>Bu ilkeler, gezgin hayatının temel taşlarını oluşturur. Yolda sana yoldaşlık eder, olabileceğin en iyi versiyonuna ulaşman için rehber olur. Bu değerlerle kendi çılgın maceralarına atılacaksın ve bu yolda hayatı, seyahati, kendini, insanlığı ve şu deli dolu, su ve topraktan oluşan, dönüp duran evimizi daha iyi tanıyacaksın.</p>
+                            <p>Seyahat, kendini geliştirmek için en güzel fırsat. Seni konfor alanından fırlatıp, gerçek büyümenin olduğu yere götürür.</p>
+                            <p>Seyahat, neyin gerçekten önemli olduğunu netleştirir; nelerde iyisin, nelerde eksiksin, neye değer veriyorsun. Seyahat etmek, büyümek, değişmek, zorluklarla yüzleşmek ve sonunda ateşten geçip daha güçlü, daha iyi bir sen olarak çıkmaktır. Kendin için, sevdiklerin için, dünyadaki kocaman ailemiz için ve hatta, <strong>dünyanın kendisi için bile.</strong></p>
+                        </div>
+                        <div class="right-content">
+                            <h2>Büyüme, Konfor Alanının Kenarında Başlar</h2>
+                            <p>Seyahat ve hayat, birbirine çok benzeyen iki yolculuk. Bilinmeze doğru atılan adımlar, seni hiç beklemediğin değişimlere ve büyümelere taşır. Güzel yaşanmış bir hayat, iyi yapılmış bir yolculuk, seni her zaman başladığından daha güçlü bir insan yapar.</p>
+                            <p>Seyahat de, hayat da muhteşem. Dünya, hayran bırakan manzaralar, içini ısıtan hikayeler ve ilham veren insanlarla dolu. Bazen bu güzellikler karşısında nutkun tutulur. Ama hayatta her şeyde bir denge var. Işık olmadan karanlık, güzellik olmadan kaos olmaz.</p>
+                            <p>Bazen gezgin olarak kaosa düşersin. Bazen karanlık, aysız yollarda kaybolursin. Ve işte o anlarda bir ışığa ihtiyacın olur.</p>
+                            <p>Tam da bu yüzden, <strong>Esat Can Travel Manifestosu var.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Div 3 -->
+            <div class="rules-section">
+                <h2>Muhteşem Bir Gezgin ve Efsane Bir İnsan Olmanın 20 Kuralı</h2>
+                <p>Bu kurallar herkes için: Macera peşinde koşanlar, sırt çantasını yeni kapanlar, yılların gezginleri, göçebe ruhlar, serseriler, hayalperestler, hatta ilk uzun tatiline çıkan öğrenciler. Tüm gezginlere yalvarıyorum, lütfen sadece okuyup geçmeyin…</p>
+                <p><strong>Yazdırın bunları.</strong> Cüzdanına, kemerine, çantana, cebine, telefonuna, hatta ayakkabına koy.</p>
+                <p>Bu manifestoyu, kendine zor soruları sormak için kullan. Seni ne harekete geçiriyor, değerlerin neler, nasıl parlayabilirsin? Çünkü yol bazen zifiri karanlık olacak. Üzgün, yalnız, evini özlemiş ya da kaybolmuş hissedeceksin. Kararsız kalıp, içindeki yaramaz sesin seni anlamsız ve zararlı şeylere sürüklemek için sırıttığını duyacaksın.</p>
+                <p>Ve seni sen yapan, işte bu anlar olacak. Şüpheye düştüğünde, sakin ol, derin bir nefes al, bu kuralları oku ve kalbinin dediğini yap. Ne yapman gerektiğini bileceksin.</p>
+            </div>
+
+            <!-- Div 4: 20 Kural -->
+            <div class="rules-list">
+                <div class="rule-row">
+                    <div class="rule-item">
+                        <h3>1. Doğayla Kucaklaş</h3>
+                        <p>Topraktan geldik, toprağa döneceğiz. Şehirlerin koşturmacasında kendimizi unutuyoruz; atalarımızın evi dediği <strong>doğayı</strong> bir kenara itiyoruz.</p>
+                        <p>Seyahat, doğayla yeniden bağ kurma şansı. Kamp yap, dağlara tırman, çocukken yaptığın gibi ağaçlara sarıl. Oralarda hâlâ eski bir sihir var, inan.</p>
+                    </div>
+                    <div class="rule-item">
+                        <h3>2. Telefonu Elinden Bırak</h3>
+                        <p>Modern gezgin hayatında teknolojinin yeri var, ama o ekran seni gerçek bir maceradan koparan bir duvar. Beğeni kovalamak, filtrelere boğulmak sadece kendini beğenmişliğe götürür; bu da bilinçli gezginliğin tam tersi.</p>
+                        <p>Yerel halktan yol sor, onların dilini öğren, rezervasyonsuz bir kasabaya dal. Eski gezginler yapabiliyorsa, sen de yaparsın. Ve dünya seni bunun için ödüllendirir.</p>
+                    </div>
+                </div>
+                <div class="rule-row">
+                    <div class="rule-item">
+                        <h3>3. Günlük Tutmayı Sakın Bırakma</h3>
+                        <p>Günlük yazmak, kendini dinlemeyi ve kendinle muhabbet etmeyi öğretir. Şimdiki seni görmeni ve hayalindeki seni çizmeni sağlar.</p>
+                        <p>Bu sadece bir seyahat değil, bir hayat yolculuğu, <strong>o yüzden yaz bunları.</strong> Bir anın seni sarstığında, bir şey öğrendiğinde, not al. Derslerini yaz ki aynı şeyleri tekrar yaşamayasın…</p>
+                        <p>Yazdıkların, belki bir gün çocuklarına, torunlarına, sevdiklerine ilham olur. Toprağa döndüğünde, bu notlar seni hatırlatacak hazineler olacak. Bir gün biri okuyacak ve yazdığın için sana teşekkür edecek.</p>
+                    </div>
+                    <div class="rule-item">
+                        <h3>4. Bilindik Yollardan Çık</h3>
+                        <p>Cesurlar şanslıdır, insanlar da cesurları sever. Yabancılarla konuş, hikayelerini dinle; cesaretine hayran kalırlar.</p>
+                        <p>Turist rotaları güzel, ama fazla kalabalık ve <em>“yine mi turist”</em> havasında. En güzel maceralar, az gidilen yollarda saklı. Dünyanın karanlık köşeleri bazen korkutsa da, <strong>orada saklı dersler seni büyütür.</strong></p>
+                        <p>Seni ürküten yerlere git: <strong>büyüme, konfor alanının kenarında başlar.</strong></p>
+                    </div>
+                </div>
+                <div class="rule-image">
+                    <img src="assets/manifesto/1.svg" alt="Tam burada">
+                    <p>Tam burada.</p>
+                </div>
+                <div class="rule-row">
+                    <div class="rule-item">
+                        <h3>5. Seyahatin Değerlerini Bulmana Yardım Etmesine İzin Ver</h3>
+                        <p>Evden uzakken sadece sevdiklerimizin desteğini değil, rehberliğini de özleriz. İnsanlar aynadır; bize sevdiğimiz ve sevmediğimiz yanlarımızı gösterir. Yalnız gezdiğinde, kendi aynan olman gerekir.</p>
+                        <p>Seyahat, güçlü ve zayıf yönlerini, tutkularını ve değerlerini ortaya çıkarır. Yolda hatalar yaparsın, belki utandığın şeyler olur. İç sesin “daha iyisini yapabilirsin” dediğinde, kulak ver.</p>
+                        <p>Bu, büyüdüğünün işaretidir.</p>
+                    </div>
+                    <div class="rule-item">
+                        <h3>6. Nazik Ol, Ama Güçlü Dur</h3>
+                        <p>Elinden geleni paylaş, ama kendini ezdirme. Gerçek bir hayat, dürüstlük, güven ve cömertlikten geçer: <strong>seyahat de öyle.</strong> Yabancılarla bağ kurmak için risk al, ama sevgiyi ve güveni seni zayıf düşürmeyecek şekilde ver.</p>
+                        <p>Herkesin bir hikayesi var: Bu dünyada HERKES senin bilmediğin bir şey bilir. Açık bir kalp, meraklı bir zihin ve sağlam bir duruş, seni en güzel sohbetlere taşır ve sihirli anlar yaşatır.</p>
+                    </div>
+                </div>
+                <div class="rule-row">
+                    <div class="rule-item">
+                        <h3>7. Paylaş</h3>
+                        <p>Seyahat, insanları bir araya getirir. Gezgin olunca para hesabı yapmak kolay, ama eşyalar, para… Bunlar gelip geçer. Hep kaybolur, hep yenisi gelir.</p>
+                        <p>Ama insanlar? Sevgi? Hayatın anlamı budur. Elindekini paylaş, verebildiğini ver, maddiyata takılma; karşılığında aldıkların, paranın alamayacağı şeyler olacak.</p>
+                    </div>
+                    <div class="rule-item">
+                        <h3>8. Yavaş ve Gerçek Gez</h3>
+                        <p>Gittiğin yerde yaşa. Acele etme, topluluklara karış, lüks turizmin şatafatını bırak ve yerel halkın hayatına ortak ol. Ara sıra kendine ziyafet çekmek sorun değil, ama bir yerde GERÇEKTEN yaşamadan orayı gezmiş sayılmazsın.</p>
+                        <p>Mükemmel bir plan yapma sevdasını bırakıp <em>“en iyi seyahat deneyimi”</em> peşinde koşmazsan, <strong>gerçek bir deneyim</strong> bulursin. Eski püskü otobüslere bin, sokak tezgahlarında yemek ye, dilini bilmediğin insanlarla kahve içip muhabbet et. Bir yer, sadece turistik mekanlar değil – orası birilerinin evi.</p>
+                    </div>
+                </div>
+                <div class="rule-image">
+                    <img src="assets/manifesto/2.svg" alt="Kalbin yol göstersin">
+                    <p>Kalbin yol göstersin.</p>
+                </div>
+                <div class="rule-row">
+                    <div class="rule-item">
+                        <h3>9. Neden Gezdiğini Unutma</h3>
+                        <p>Herkesin bir sebebi, bir ‘neden’i var: <strong>seninkini unutma.</strong> Yol karanlık ve sisli olduğunda, daha önce kurduğun temel seni ayakta tutar.</p>
+                        <p>Neden geziyorsun? Ne bulmak istiyorsun? Kim olmak istiyorsun? Bunları kendine sık sık sor; günlük tut, kendinle bağlantıda kal ve ‘yolculuk aşkı’ kibrine kapılma. NEDEN gezdiğini hatırla.</p>
+                    </div>
+                    <div class="rule-item">
+                        <h3>10. Ardında İz Bırakma</h3>
+                        <p>Ciddi söylüyorum. Bir gezgin, geldiği yeri bulduğundan daha güzel bırakmalı, asla daha kötü değil. Yemek artıklarını çöpe at, izmaritlerini cebine koy ve TEK KULLANIMLIK PLASTİĞE ‘HAYIR’ de.</p>
+                        <p>Bu gezegenin yolcuları olarak, doğaya saygı göstermek ve onu korumak bizim işimiz. Çünkü onsuz hiçbir şeyimiz olmaz.</p>
+                        <p>Bazı yerlerde çöp dağları göreceksin. “Boş ver” deme, çünkü bu her şeyden önemli. Daha iyisini yapabiliriz.</p>
+                    </div>
+                </div>
+                <div class="rule-row">
+                    <div class="rule-item">
+                        <h3>11. Yeni Şeyler Öğren, Hem de Coşkuyla</h3>
+                        <p>Havalimanlarında, trenlerde boş boş telefon karıştırma. Bir şeyler öğren! Yeni bir dil, bir sihir numarası, bir enstrüman; oku, not al.</p>
+                        <p>Yolda, boş zamanlarında ya da gönüllü işlerde, yeni şeyler öğrenmek için sonsuz fırsatın olacak. Bu anlara balıklama dal, öğrenmenin keyfini çıkar. Her yeni bilgi seni daha güçlü yapar.</p>
+                    </div>
+                    <div class="rule-item">
+                        <h3>12. Aksiliklerle Dans Et</h3>
+                        <p>Ve gülmeyi unutma. Her şeyde, özellikle hatalarda mizahı bul. Gerçek seyahat, bu aksiliklerde saklı.</p>
+                        <p>Plansız aksilikler olmasa, seyahat bu kadar renkli olmazdı. Zorluklar olmasa, bu kadar tatmin edici de olmazdı. İşler ters gittiğinde gül, çünkü GİDECEK. Sonra bırak gitsin ve yola devam et. Bu, hayatta güzel bir espri anlayışı kazandırır…</p>
+                        <p>İnsanların etrafında olmak istediği türden.</p>
+                    </div>
+                </div>
+                <div class="rule-image">
+                    <img src="assets/manifesto/3.svg" alt="Hayat güzel, ha?">
+                    <p>Hayat güzel, ha?</p>
+                </div>
+                <div class="rule-row">
+                    <div class="rule-item">
+                        <h3>13. Kendini Uyuşturma</h3>
+                        <p>Her köşede parti, takılmak için insanlar bulursun. İçki, uyuşturucu, rahatlık, geçici flörtler – bunlar bulanık su gibi. <strong>Seni uyuşturur, seyahatten koparır.</strong></p>
+                        <p>Çılgın anlarının tadını çıkar, ama unutma, seyahat bununla ilgili değil. Herkesle vakit geçirmek doğru değil. Uyuşukluğu hissettiğinde ve yoldan saptığını bildiğinde, daha anlamlı bir şeyler yapmanın vakti gelmiştir.</p>
+                    </div>
+                    <div class="rule-item">
+                        <h3>14. Akışına Bırak, İçine Güven, Nefes Al</h3>
+                        <p>Klişe mi? Belki. Ama bu klişeler bizi yolda tutar. <strong>İçine güven:</strong> seni gitmen gereken yere götürür. İç sesin, belirsiz bir maneviyat değil; sezgindir. Dinle.</p>
+                        <p>Seyahat ederken bir yönün olsun, ama katı planların olmasın. <strong>Akışına bırak,</strong> fırsatlara açık ol, isteklerinde esnek ol. En güzel tesadüfler, onlara alan tanıdığında olur.</p>
+                        <p>İşler ters gider, kaygı basar, her şey <em>“plana uymazsa”</em>, <strong>nefes almayı unutma.</strong> Kendine ve dünyanın sana sunduklarına güven. Güzel şeyler gelecek.</p>
+                    </div>
+                </div>
+                <div class="rule-row">
+                    <div class="rule-item">
+                        <h3>15. Güvende Kal, Kendine İyi Bak</h3>
+                        <p><em>Her zorluğu kucakla, ama sadece güvende kalmak için yeterince kork.</em> Dünya sana çılgın maceralar sunar, ama bir şey fazla riskliyse, “bu aptalca” diyen sesi dinle.</p>
+                        <p>Güvenlik sadece seninle ilgili değil; seni sevenlerle ilgili. Yolda başına bir şey gelirse, acıyı çeken sevdiklerin olur. Arkadaşların, ailen, annen… seni sapasağlam görmek istiyor.</p>
+                        <p><strong>Onlar için yap.</strong></p>
+                    </div>
+                    <div class="rule-item">
+                        <h3>16. Hayvanları Rahat Bırak</h3>
+                        <p>Hayvan turizmi, ahlaksızlık ve yolsuzlukla dolu. Yabani hayvanlar <strong>yabani</strong> olmalı. Bir hayvanın binilmesine ya da kafese girmesine izin vermesi için neler yaşadığını düşün.</p>
+                        <p>Hayvanlar eğlencemiz için birer obje değil; canlı varlıklar. Korumamız gereken yaban hayatını sömüren bir sektörü destekleme – hayvan turizmine bulaşma. Hayvanlara nazik ol.</p>
+                        <p>Özellikle sokaklarda sefil köpeklere ve kedilere. Onlar sevgiye en çok ihtiyaç duyanlar.</p>
+                    </div>
+                </div>
+                <div class="rule-image">
+                    <img src="assets/manifesto/4.svg" alt="Hayvanlar">
+                    <p>Tabii ki sana sarılmaya gelirlerse başka!</p>
+                    <p class="image-credit">Fotoğraf: @esat.can</p>
+                </div>
+                <div class="rule-row">
+                    <div class="rule-item">
+                        <h3>17. Hareket Et – Bedenine İyi Bak</h3>
+                        <p>Bu, en büyük hazinen. Sağlıklı bir beden ve zihin birbiriyle bağlı; biri olmazsa diğeri de olmaz. Yolda hayat, seni sağlıklı alışkanlıklardan koparıp tembelliğe itebilir: <strong>hareket et.</strong></p>
+                        <p>Dağlara çık, bol bol yürü, sabah yoga yap, meditasyonla uyan; sana uyanı bul ve alışkanlık yap. Seyahatte değişen yemekler, geç geceler ve her şeyin kaosu yorar. Gerekirse bir hafta mola ver, spor yap; bedenine zaman ayır.</p>
+                    </div>
+                    <div class="rule-item">
+                        <h3>18. Gülümse</h3>
+                        <p>Hem de kocaman, içten, abartılı. Gerçek bir gülümseme seni çok yere götürür. Ve bazen, bir gülümseme birinin gününü güzelleştirmek için yeter.</p>
+                        <p>Sokakta sana merakla bakan birini gördüğünde, gülümse. Evini özlediğinde, gülümse. Kendini zirvede hissettiğinde, <strong>gülümse ve dünyayla paylaş!</strong></p>
+                        <p>Bir gezgin, geçtiği yeri daha güzel bırakmalı; bazen bu, sadece bir kişiyi gülümsetmek demektir.</p>
+                    </div>
+                </div>
+                <div class="rule-row">
+                    <div class="rule-item">
+                        <h3>19. Kalbinle Gez</h3>
+                        <p><em>Ancak kalple gerçekten görebilirsin; asıl önemli olan gözle görünmez.</em> Seyahatte kalbi unutmak kolay. Yalnız kalmaktan korkup yanlış yerlerde ya da insanlarla fazla kalabiliriz; yolumuzu paraya göre seçebiliriz.</p>
+                        <p>Ama gerçek seyahat kalple yapılır. Gözler Ascılla gözler görür, kulaklar duyar, ama kalp bilir. Düşünmek iyidir, ama ne zaman düşünmeyi bırakıp hissetmen gerektiğini bilmek de iyidir.</p>
+                    </div>
+                    <div class="rule-item">
+                        <h3>20. Ruhunda Huzuru Tut</h3>
+                        <p>Basit, ama bazen en basit şeyler en gerekli olanlar. Dünya, her zamankinden çok huzura muhtaç. <strong>Sen o huzur ol.</strong></p>
+                        <p>Minnettarlık, iyilik, umut – bunlar huzuru korur. Küçük ya da büyük, şükredecek çok şeyin var. Ve umutlanacak daha çok şey var. Dünya kusurlu, ama ona duyduğun minnet ve iyimserlik ruhunun iyiliğini beslesin. Alaycılığın dalgalarına bir deniz feneri gibi diren – bir ışık ol.</p>
+                        <p>İyilikle yaşanmış bir hayat, sana sonsuz mutluluk verir. İnsanlar iyiliğe çekilir; yalnız kalmazsın. Hayatın gürültüsü ne kadar artarsa artsın, minnettar ve umutlu kal.</p>
+                        <p><strong>Ruhunda huzuru tut.</strong></p>
+                    </div>
+                </div>
+                <div class="rule-image">
+                    <img src="assets/manifesto/5.svg" alt="Huzur">
+                </div>
+            </div>
+
+            <!-- Div 5 -->
+            <div class="closing-section">
+                <p><strong>İşte Esat Can Travel Manifestosu’nun 20 kuralı.</strong> Bunları yakınında tut, dostum. Sana destek olacakları günler gelecek.</p>
+                <p><em>“Seyahatin doğru ya da yanlış yolu yoktur.”</em> Yolda sıkça duyarsın bunu. Ama ben diyorum ki, <strong>kanma.</strong> Hayatta doğru ve yanlış yol olduğu gibi, seyahatte de var.</p>
+                <p>‘Yanlış yol’ ne? Bunu ben sana söyleyemem. <strong>Bunu sen bulmalısın.</strong></p>
+                <p>Kendi pusulan, kendi haritan SEN olmalısın. Bu kurallar karanlıkta bir lamba gibi yardımcı olur, ama rehberin ve yoldaşın sensin.</p>
+                <p>Seyahat, başka bir hayat biçimi. Evdeki gibi cesaret ve saygıyla yaşanmalı. Kendi ahlakını bul, değerlerini çiz ve her gün o insan olmaya çalış. Seçtiğin yoldan saptığında, yanlış yönde gezdiğini anlarsın.</p>
+                <p>Amaçsız gezmek, hayatta dümensiz bir teknede savrulmak gibidir. Özgürce, düşünmeden, eylemlerinin etkisini umursamadan yaşamak büyük bir özgürlük gibi görünebilir, ama değersiz bir hayat en karanlık zindandır.</p>
+                <p><strong>Çünkü bu, kendi kendine kurduğun bir hapishane.</strong></p>
+                <p>Ama değerlerini seçmek, kim olmak istediğini bilmek ve onunla uyum içinde gezmek, yaşamak… İşte bu GERÇEK özgürlük.</p>
+                <p>Bu 20 kural, <em>Esat Can Travel Manifestosu’nu oluşturur.</em> Ama dahası, gerçek bir gezgin olmanın ne demek olduğunu anlatır. En iyi gezgin.</p>
+                <p>Gerçek bir gezgin, sadece az parayla dolaşan biri değil. Sırt çantasını alıp maceralara atılan neşeli bir tip de değil sadece.</p>
+                <p>Gerçek bir gezgin, bu güzel dünyanın sunduğu bilgeliği ve büyümeyi arayan biridir. Ve bu bilgeliği bulmak için önce rahatsızlığı göze almak gerektiğini bilen biridir. Seyahatin dönüştürücü gücünü keşfetmek için, önce fırtınanın göbeğine yürümeli ve kendini fiziksel, zihinsel zorluklara açmalısın.</p>
+                <p>Bir keresinde, bir nehir kenarında, günlerdir yalnız ve huzurla kamp yaptığım yerde bir kadın beni gördü. Dedi ki:</p>
+                <p><em>“Evsiz misiniz?”</em></p>
+                <p>Ben de dedim ki…</p>
+                <p><em>“Evet. Ama kendi seçimimle.”</em></p>
+                <p>Ve o gülümsedi. Çünkü anladı.</p>
+                <p>Sen de anlayacaksın, yeter ki gez ve iyi gez. Seni zorlayan yerlere git, seni büyüten şeyler yap. Unutma:</p>
+                <h2>Büyüme, Konfor Alanının Kenarında Başlar</h2>
+                <p>Ve zamanı geldiğinde, dönüştüğün insan olarak sevdiklerinin yanına dön. Bunun için sana minnettar olacaklar. Ve sen de olacaksın.</p>
+                <p>Zor yollardan korkma; hayatın en güzel hazineleri orada saklı. Ve o yolların sonuna vardığında, neden gezdiğini anlayacaksın.</p>
+                <p>Çünkü güzel bir hayat yaşadın. Ve özgürdün.</p>
+                <div class="logo-section">
+                    <img src="assets/logo.svg" alt="Esat Can Travel Logo">
+                </div>
+            </div>
+
+            <!-- Div 6: Kayıt Formu -->
+            <div class="signup-section">
+                <p>Tam baskıya hazır manifestoyu, kısa versiyonunu ya da kendi manifestonu yazman için kaynakları <strong>ÜCRETSİZ</strong> mi istiyorsun?</p>
+                <p>O zaman aşağıdan kaydol ve tüm bunlara + DAHA FAZLA güzelliğe erişebileceğin özel VIP alanımıza katıl!</p>
+                <form class="subscription-form" id="subscription-form" onsubmit="handleSubscription(event)">
+                    <input type="text" placeholder="Ad*" name="name" required>
+                    <input type="email" placeholder="E-posta*" name="email" required>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="privacy" required>
+                        Kişisel bilgilerimin Esat Can Travel Gizlilik Politikası’na uygun şekilde işlenmesine izin veriyorum (Gerekli)
+                    </label>
+                    <button type="submit">Beni kaydet!</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="assets/logowhite.svg" alt="Esat Can Travel Logo">
+            </div>
+            <div class="footer-links">
+                <h3>Bağlantılar</h3>
+                <ul>
+                    <li><a href="index.html">Anasayfa</a></li>
+                    <li><a href="blog/index.html">Blog</a></li>
+                    <li><a href="destinasyonlar/index.html">Destinasyonlar</a></li>
+                    <li><a href="seyahat-ekipmani/index.html">Seyahat Ekipmanı</a></li>
+                    <li><a href="kaynaklar/index.html">Kaynaklar</a></li>
+                    <li><a href="kurslar/index.html">Kurslar</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Bizi Takip Et</h3>
+                <a href="https://instagram.com/esat.can"><img src="assets/instagram-white.svg" alt="Instagram"></a>
+                <a href="https://x.com/esatcaan"><img src="assets/twitter-white.svg" alt="Twitter"></a>
+                <a href="https://facebook.com/esatcann"><img src="assets/facebook-white.svg" alt="Facebook"></a>
+            </div>
+            <div class="footer-contact">
+                <h3>İletişim</h3>
+                <p>E-posta: <a href="mailto:info@esatcantravel.com">info@esatcantravel.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Esat Can Travel. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <!-- Pop-up (Top-up) -->
+    <div class="popup" id="subscription-popup">
+        <div class="popup-content">
+            <h2>Hoş Geldin, <span id="user-name"></span>!</h2>
+            <p>Esat Can Travel ailesine katıldığın için çok mutluyuz! Artık özel VIP alanımıza erişim sağlayabilirsin. Burada seni bekleyen harika şeyler var: <strong>"Ucuza Gezmenin Kitabı"</strong> ve birbirinden değerli PDF kaynakları ile yolculuklarını bir üst seviyeye taşıyabilirsin.</p>
+            <p>Hazır mısın? Hemen aşağıdan VIP alanına geçiş yap ve maceraya başla!</p>
+            <button onclick="redirectToVIP()">Onaylama</button>
+        </div>
+    </div>
+
+    <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="assets/manifesto/script.js"></script>
+</body>
+</html>
