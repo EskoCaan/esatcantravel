@@ -306,6 +306,8 @@ body {
     transition: all 0.5s ease;
     position: relative;
     z-index: 1;
+    /* Hata ayıklama için: Resim yüklenmezse gri arka plan */
+    background-color: #ccc;
 }
 
 .hero-section.scrolled {
@@ -611,6 +613,15 @@ main {
 .footer-contact a {
     color: #F2D7B2;
     text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
 }
 
 /* Yukarı çık butonu */

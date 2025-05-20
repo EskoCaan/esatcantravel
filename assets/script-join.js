@@ -1,4 +1,4 @@
-/* Hamburger menü açma/k});kapatma */
+/* Hamburger menü açma/kapatma */
 function toggleMobileMenu() {
     const nav = document.querySelector('.main-nav');
     const hamburger = document.querySelector('.hamburger');
