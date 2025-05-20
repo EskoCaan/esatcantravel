@@ -241,7 +241,11 @@ function setupAnimations() {
         scrollTrigger: {
             trigger: '.cards-container',
             start: 'top 80%',
-            toggleActions: 'play none none none'
+            toggleActions: 'play none none none',
+            onEnter: () => {
+                // GSAP animasyonu tamamlandıktan sonra VanillaTilt'i başlat
+                setTimeout(setupTiltEffects, 600); // Animasyon süresi kadar bekle
+            }
         }
     });
 
@@ -356,11 +360,22 @@ function handlePriceCalculation() {
 /* VanillaTilt Efektleri */
 function setupTiltEffects() {
     if (typeof VanillaTilt !== 'undefined') {
+        // Mevcut tilt efektlerini temizle (tekrar başlatmayı önlemek için)
+        document.querySelectorAll('.insurance-card').forEach(card => {
+            if (card.vanillaTilt) {
+                card.vanillaTilt.destroy();
+            }
+        });
+
+        // VanillaTilt'i başlat
         VanillaTilt.init(document.querySelectorAll('.insurance-card'), {
-            max: 15,
+            max: 10, // Daha hafif bir eğim
             speed: 400,
             glare: true,
-            'max-glare': 0.3
+            'max-glare': 0.2,
+            scale: 1.02, // Hafif bir büyütme efekti
+            reset: true, // Mouse ayrıldığında sıfırlanır
+            perspective: 1000 // Daha doğal bir 3D efekti
         });
     } else {
         console.warn('VanillaTilt kütüphanesi yüklenmedi.');
@@ -372,7 +387,12 @@ document.addEventListener('DOMContentLoaded', () => {
     setupDropdowns();
     setupRegionMenus();
     setupAnimations();
-    setupTiltEffects();
+    // setupTiltEffects burada çağrılmıyor, GSAP animasyonundan sonra çağrılacak
 });
 
 window.addEventListener('scroll', handleScroll);
+
+// Tüm kaynakların yüklendiğinden emin olmak için
+window.addEventListener('load', () => {
+    // GSAP animasyonları zaten setupAnimations içinde yönetiliyor
+});
