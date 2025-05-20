@@ -308,8 +308,7 @@ body {
 /* Hero bölümü */
 .hero-section {
     height: 100vh;
-    background: url('esimler-bg.jpg') no-repeat center;
-    background-size: cover;
+    background: url('esimler-bg.jpg') no-repeat center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -321,8 +320,7 @@ body {
 }
 
 .hero-section.scrolled {
-    height: 40vh;
-    max-height: 300px;
+    height: 50vh;
     border-radius: 20px;
     margin: 20px;
 }
@@ -684,31 +682,26 @@ tr:hover {
 .footer {
     background-color: #000;
     color: #fff;
-    padding: 60px 20px 40px;
-    position: relative;
-    z-index: 1;
+    padding: 40px 20px;
 }
 
 .footer-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
-    max-width: 1400px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
     margin: 0 auto;
-    align-items: start;
 }
 
 .footer-logo img {
-    height: 70px;
+    height: 60px;
 }
 
 .footer-links h3,
 .footer-social h3,
 .footer-contact h3 {
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #F2D7B2;
+    font-size: 20px;
+    margin-bottom: 15px;
 }
 
 .footer-links ul {
@@ -717,27 +710,25 @@ tr:hover {
 }
 
 .footer-links li {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .footer-links a {
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s ease, transform 0.2s ease;
+    transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
     color: #F2D7B2;
-    transform: translateX(5px);
 }
 
 .footer-social a {
-    margin-right: 20px;
+    margin-right: 15px;
 }
 
 .footer-social img {
-    height: 28px;
+    height: 24px;
     transition: transform 0.2s ease;
 }
 
@@ -746,44 +737,35 @@ tr:hover {
 }
 
 .footer-contact p {
-    margin: 8px 0;
-    font-size: 16px;
+    margin: 5px 0;
 }
 
 .footer-contact a {
     color: #F2D7B2;
     text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-contact a:hover {
-    color: #fff;
 }
 
 .footer-bottom {
     text-align: center;
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
 }
 
 .footer-bottom p {
     font-size: 14px;
-    color: #ccc;
 }
 
 /* Yukarı çık butonu */
 .scroll-to-top {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
     background-color: #288616;
     color: #fff;
     border: none;
     border-radius: 50%;
-    font-size: 28px;
+    font-size: 24px;
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
@@ -797,47 +779,15 @@ tr:hover {
 
 .scroll-to-top:hover {
     transform: scale(1.1);
-    background-color: #1e6b11;
 }
 
 /* Responsive Tasarım */
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 769px) {
     .menu-container {
         padding: 15px 20px;
+        max-width: 100%;
     }
 
-    .hero-content {
-        padding: 30px;
-    }
-
-    .resources-content {
-        padding: 20px;
-    }
-
-    .content-section {
-        padding: 25px;
-    }
-
-    .sim-comparison {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-
-    .sim-card {
-        padding: 15px;
-        min-height: 280px;
-    }
-
-    .sim-details {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .footer-container {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-}
-
-@media (max-width: 768px) {
     .hamburger {
         display: flex;
     }
@@ -848,10 +798,9 @@ tr:hover {
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: #000;
-        padding: 20px 0;
-        border-radius: 0 0 10px 10px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
 
     .main-nav.active {
@@ -860,69 +809,78 @@ tr:hover {
 
     .main-nav ul {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .main-nav li {
         margin: 10px 0;
         width: 100%;
-        text-align: center;
+    }
+
+    .main-nav a {
+        padding: 10px;
     }
 
     .dropdown-content {
-        position: static;
-        width: 100%;
+        position: relative;
         box-shadow: none;
-        background: none;
-        padding: 0;
-    }
-
-    .menu-bar.scrolled .dropdown-content {
-        background: none;
-    }
-
-    .dropdown-content a {
-        padding: 10px;
-        color: #fff;
-    }
-
-    .menu-bar.scrolled .dropdown-content a {
-        color: #fff;
-    }
-
-    .dropdown-content a:hover {
-        background-color: #333;
-        padding-left: 20px;
+        padding: 10px 0 0 20px;
     }
 
     .sub-menu {
-        position: static;
-        width: 100%;
-        box-shadow: none;
-        background: none;
-        padding: 0;
-    }
-
-    .menu-bar.scrolled .sub-menu {
-        background: none;
-    }
-
-    .sub-menu a {
-        padding: 10px;
-        color: #fff;
-    }
-
-    .menu-bar.scrolled .sub-menu a {
-        color: #fff;
-    }
-
-    .sub-menu a:hover {
-        background-color: #333;
-        padding-left: 20px;
+        position: relative;
+        left: 0;
+        padding: 10px 0 0 20px;
     }
 
     .right-section {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-container {
+        padding: 15px 20px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .main-nav {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-nav.active {
+        display: block;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav li {
+        margin: 10px 0;
+    }
+
+    .dropdown-content {
+        position: relative;
+        box-shadow: none;
+        padding: 10px 0 0 20px;
+    }
+
+    .sub-menu {
+        position: relative;
+        left: 0;
+        padding: 10px 0 0 20px;
     }
 
     .hero-section {
@@ -930,8 +888,7 @@ tr:hover {
     }
 
     .hero-section.scrolled {
-        height: 30vh;
-        max-height: 200px;
+        height: 40vh;
     }
 
     .hero-content {
@@ -980,7 +937,7 @@ tr:hover {
 
     .sim-details {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
     }
 
     .footer-container {
