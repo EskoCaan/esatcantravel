@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaynaklar - Esat Can Travel</title>
+    <link rel="stylesheet" href="assets/style-kaynaklar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+</head>
+<body>
+    <header class="menu-bar">
+        <div class="menu-container">
+            <div class="logo">
+                <a href="../index.html" onclick="handleLogoClick(event)"><img src="../assets/logo.svg" alt="Esat Can Travel Logo" id="menu-logo"></a>
+            </div>
+            <div class="hamburger" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li class="dropdown">
+                        <a href="../index.html">Başlangıç</a>
+                        <div class="dropdown-content">
+                            <a href="../selam.html">Selam!</a>
+                            <a href="../manifesto.html">Manifesto</a>
+                            <a href="../baslangic/bizimle-calisin.html">Benimle Çalışın</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../blog/index.html">Blog</a>
+                        <div class="dropdown-content">
+                            <a href="../blog/butce-seyahati.html">Bütçe Seyahati</a>
+                            <a href="../blog/kisisel-gelisim.html">Kişisel Gelişim</a>
+                            <a href="../blog/calisma-ve-seyahat.html">Çalışma ve Seyahat</a>
+                            <a href="../blog/yeni-gonderiler.html">Yeni Gönderiler</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../destinasyonlar/index.html">Destinasyonlar</a>
+                        <div class="dropdown-content">
+                            <div class="region-menu"><a href="#" class="region-link">Avrupa</a><div class="sub-menu"><a href="../destinasyonlar/france/france.html">Fransa</a><a href="../destinasyonlar/iceland/iceland.html">İzlanda</a><a href="../destinasyonlar/italy/italy.html">İtalya</a><a href="../destinasyonlar/spain/spain.html">İspanya</a><a href="../destinasyonlar/uk/uk.html">Birleşik Krallık</a><a href="../destinasyonlar/avrupa-daha-fazlasi.html">Avrupa'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Güneydoğu Asya</a><div class="sub-menu"><a href="../destinasyonlar/indonesia/indonesia.html">Endonezya</a><a href="../destinasyonlar/myanmar/myanmar.html">Myanmar</a><a href="../destinasyonlar/philippines/philippines.html">Filipinler</a><a href="../destinasyonlar/thailand/thailand.html">Tayland</a><a href="../destinasyonlar/vietnam/vietnam.html">Vietnam</a><a href="../destinasyonlar/guneydogu-asya-daha-fazlasi.html">Güneydoğu Asya'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Güney Amerika</a><div class="sub-menu"><a href="../destinasyonlar/argentina/argentina.html">Arjantin</a><a href="../destinasyonlar/brazil/brazil.html">Brezilya</a><a href="../destinasyonlar/colombia/colombia.html">Kolombiya</a><a href="../destinasyonlar/ecuador/ecuador.html">Ekvador</a><a href="../destinasyonlar/peru/peru.html">Peru</a><a href="../destinasyonlar/guney-amerika-daha-fazlasi.html">Güney Amerika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Orta Amerika</a><div class="sub-menu"><a href="../destinasyonlar/belize/belize.html">Belize</a><a href="../destinasyonlar/costa-rica/costa-rica.html">Kosta Rika</a><a href="../destinasyonlar/cuba/cuba.html">Küba</a><a href="../destinasyonlar/guatemala/guatemala.html">Guatemala</a><a href="../destinasyonlar/panama/panama.html">Panama</a><a href="../destinasyonlar/orta-amerika-daha-fazlasi.html">Orta Amerika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Asya</a><div class="sub-menu"><a href="../destinasyonlar/india/india.html">Hindistan</a><a href="../destinasyonlar/japan/japan.html">Japonya</a><a href="../destinasyonlar/pakistan/pakistan.html">Pakistan</a><a href="../destinasyonlar/south-korea/south-korea.html">Güney Kore</a><a href="../destinasyonlar/sri-lanka/sri-lanka.html">Sri Lanka</a><a href="../destinasyonlar/asya-daha-fazlasi.html">Asya'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Kuzey Amerika</a><div class="sub-menu"><a href="../destinasyonlar/canada/canada.html">Kanada</a><a href="../destinasyonlar/mexico/mexico.html">Meksika</a><a href="../destinasyonlar/usa/usa.html">Amerika</a><a href="../destinasyonlar/kuzey-amerika-daha-fazlasi.html">Kuzey Amerika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Okyanusya</a><div class="sub-menu"><a href="../destinasyonlar/australia/australia.html">Avustralya</a><a href="../destinasyonlar/new-zealand/new-zealand.html">Yeni Zelanda</a><a href="../destinasyonlar/pacific-islands/pacific-islands.html">Pasifik Adaları</a><a href="../destinasyonlar/okyanusya-daha-fazlasi.html">Okyanusya'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Afrika</a><div class="sub-menu"><a href="../destinasyonlar/morocco/morocco.html">Fas</a><a href="../destinasyonlar/mozambique/mozambique.html">Mozambik</a><a href="../destinasyonlar/namibia/namibia.html">Namibya</a><a href="../destinasyonlar/south-africa/south-africa.html">Güney Afrika</a><a href="../destinasyonlar/tanzania/tanzania.html">Tanzanya</a><a href="../destinasyonlar/afrika-daha-fazlasi.html">Afrika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Orta Doğu</a><div class="sub-menu"><a href="../destinasyonlar/egypt/egypt.html">Mısır</a><a href="../destinasyonlar/iran/iran.html">İran</a><a href="../destinasyonlar/israel/israel.html">İsrail</a><a href="../destinasyonlar/lebanon/lebanon.html">Lübnan</a><a href="../destinasyonlar/turkey/turkey.html">Türkiye</a><a href="../destinasyonlar/orta-dogu-daha-fazlasi.html">Orta Doğu'nun daha fazlası</a></div></div>
+                        </div>
+                    </li>
+                    <li><a href="../seyahat-ekipmani/index.html">Seyahat Ekipmanı</a></li>
+                    <li class="dropdown">
+                        <a href="../kaynaklar/index.html">Kaynaklar</a>
+                        <div class="dropdown-content">
+                            <a href="seyahat-sigortasi.html">Seyahat Sigortası</a>
+                            <a href="esimler.html">eSIM'ler</a>
+                            <a href="seyahat-bankalari.html">Seyahat Bankaları</a>
+                        </div>
+                    </li>
+                    <li><a href="../kurslar/index.html">Kurslar</a></li>
+                </ul>
+            </nav>
+            <div class="right-section">
+                <a href="../join.html" class="join-btn">Çeteye Katıl</a>
+                <img src="../assets/search.svg" alt="Search" class="search-icon" onclick="toggleSearch()">
+            </div>
+        </div>
+        <div class="search-bar" id="search-bar" style="display: none;">
+            <form id="search-form" onsubmit="handleSearch(event)">
+                <input type="text" placeholder="Blogda ara..." id="search-input" oninput="suggestKeywords()">
+                <div id="suggestions" class="suggestions-box"></div>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Bölümü -->
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1 class="welcome-text">Seyahat İçin En İyi Kaynaklar</h1>
+                <h2>Yolda hayatı kolaylaştıran araçlar, Esat Can Travel farkıyla!</h2>
+                <p>Konaklamadan uçuşa, sigortadan ekipmana, her maceracı için test edilmiş öneriler. Bu linklerle hem tasarruf et hem çeteme destek ol!</p>
+            </div>
+        </div>
+
+        <!-- İçerik Bölümü -->
+        <section class="resources-content">
+            <div class="intro-text">
+                <h2>Esat’ın Seyahat Araç Kutusu</h2>
+                <p>2018’den beri yollardayım ve bu süreçte tonla araç denedim. Aşağıda, sırt çantalı gezginler, dijital göçebeler ve macera bağımlıları için en iyi kaynakları listeledim. Her biri bizzat test edildi, Esat onaylı! 😎 Linkler üzerinden rezervasyon yaparsan, bana ufak bir komisyon gelir, ama senin cebinden ekstra kuruş çıkmaz. Hazır mısın, yolculuğunu bir üst seviyeye taşıyalım!</p>
+            </div>
+
+            <!-- Konaklama -->
+            <div class="resource-category">
+                <h2>Konaklama Rezervasyonu</h2>
+                <div class="resource-grid">
+                    <div class="resource-card" data-tilt>
+                        <img src="assets/logos/hostelworld-logo.png" alt="Hostelworld Logo" class="resource-logo">
+                        <h3>Neden Hostelworld?</h3>
+                        <p>Yolda yeni dostlar edinmek için hosteller gibisi yok. Hostelworld, dünyanın en büyük hostel platformu. Solo gezginler için biçilmiş kaftan!</p>
+                        <a href="https://www.hostelworld.com/?aff=ESATCAN" class="resource-btn">HOSTELWORLD’Ü AÇ</a>
+                    </div>
+                    <div class="resource-card" data-tilt>
+                        <img src="assets/logos/booking-logo.png" alt="Booking.com Logo" class="resource-logo">
+                        <h3>Neden Booking.com?</h3>
+                        <p>Oteller, pansiyonlar, villalar... Her bütçeye uygun fırsatlar. Son bir yılda ekibimin favorisi oldu, sen de denemelisin!</p>
+                        <a href="https://www.booking.com/?aid=ESATCAN" class="resource-btn discount">%20 İNDİRİM</a>
+                    </div>
+                    <div class="resource-card" data-tilt>
+                        <img src="assets/logos/airbnb-logo.png" alt="Airbnb Logo" class="resource-logo">
+                        <h3>Neden Airbnb?</h3>
+                        <p>Bali’de ağaç evden İstanbul’da loft daireye, Airbnb’yle sıradışı konaklamalar bul. Ben de host’um, biliyorsun!</p>
+                        <a href="https://www.airbnb.com/?r=ESATCAN" class="resource-btn">AIRBNB’Yİ AÇ</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Uçuş -->
+            <div class="resource-category">
+                <h2>Uçuş Rezervasyonu</h2>
+                <div class="resource-grid">
+                    <div class="resource-card" data-tilt>
+                        <img src="assets/logos/skyscanner-logo.png" alt="Skyscanner Logo" class="resource-logo">
+                        <h3>Neden Skyscanner?</h3>
+                        <p>Uçuş fırsatlarında rakipsiz. En ucuz biletleri bulmak için ilk durak burası!</p>
+                        <a href="https://www.skyscanner.com/?associate=ESATCAN" class="resource-btn">SKYSCANNER’I AÇ</a>
+                    </div>
+                    <div class="resource-card" data-tilt>
+                        <img src="assets/logos/kayak-logo.png" alt="Kayak Logo" class="resource-logo">
+                        <h3>Neden Kayak?</h3>
+                        <p>Uçuş karşılaştırmada süper bir araç. Fiyat alarmı kur, en iyi fırsatı yakala!</p>
+                        <a href="https://www.kayak.com/?a=ESATCAN" class="resource-btn">KAYAK’I AÇ</a>
+                    </div>
+                    <div class="resource-card" data-tilt>
+                        <img src="assets/logos/google-flights-logo.png" alt="Google Flights Logo" class="resource-logo">
+                        <h3>Neden Google Flights?</h3>
+                        <p>Rotalarımı planlarken ilk buraya bakıyorum. Hızlı, basit ve süper kullanışlı.</p>
+                        <a href="https://www.google.com/flights?aff=ESATCAN" class="resource-btn">GOOGLE FLIGHTS’I AÇ</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sigorta -->
+            <div class="resource-category">
+                <h2>Seyahat Sigortası</h2>
+                <div class="resource-grid">
+                    <div class="resource-card" data-tilt>
+                        <img src="assets/logos/safetywing-logo.png" alt="SafetyWing Logo" class="resource-logo">
+                        <h3>Neden SafetyWing?</h3>
+                        <p>Dijital göçebeler için uygun fiyatlı sağlık sigortası. Nerede olursan ol, güvendesin!</p>
+                        <a href="https://safetywing.com/?referenceID=ESATCAN" class="resource-btn">SAFETYWING’İ AÇ</a>
+                    </div>
+                    <div class="resource-card" data-tilt>
+                        <img src="assets/logos/worldnomads-logo.png" alt="World Nomads Logo" class="resource-logo">
+                        <h3>Neden World Nomads?</h3>
+                        <p>Maceracılar için en kapsamlı sigorta. İki kez kullandım, sorun yaşamadım!</p>
+                        <a href="https://www.worldnomads.com/?affiliate=ESATCAN" class="resource-btn">WORLD NOMADS’I AÇ</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bağlantı -->
+            <div class="resource-category">
+                <h2>Bağlantıda Kal (eSIM)</h2>
+                <div class="resource-grid">
+                    <div class="resource-card" data-tilt>
+                        <img src="assets/logos/jetpac-logo.png" alt="JetPac Logo" class="resource-logo">
+                        <h3>Neden JetPac?</h3>
+                        <p>Favori eSIM’imiz. Yolda kesintisiz internet için süper bir seçenek.</p>
+                        <a href="https://www.jetpacglobal.com/?promo=ESAT10" class="resource-btn discount">%10 İNDİRİM</a>
+                    </div>
+                    <div class="resource-card" data-tilt>
+                        <img src="assets/logos/nomad-logo.png" alt="Nomad Logo" class="resource-logo">
+                        <h3>Neden Nomad?</h3>
+                        <p>Gezginler için güvenilir internet. Her ülkede kolayca bağlan!</p>
+                        <a href="https://www.getnomad.app/?r=ESATCAN" class="resource-btn">NOMAD’I AÇ</a>
+                    </div>
+                </div>
+                <div class="button-row">
+                    <a href="esimler.html" class="standalone-btn">eSIM’leri Karşılaştır</a>
+                </div>
+            </div>
+
+            <!-- Finans -->
+            <div class="resource-category">
+                <h2>Finans Yönetimi</h2>
+                <div class="resource-grid">
+                    <div class="resource-card" data-tilt>
+                        <img src="assets/logos/wise-logo.png" alt="Wise Logo" class="resource-logo">
+                        <h3>Neden Wise?</h3>
+                        <p>Gezginler için en iyisi! Düşük ücretler, süper döviz kurlarıyla para transferi.</p>
+                        <a href="https://wise.com/invite/u/esatcan" class="resource-btn">WISE’I AÇ</a>
+                    </div>
+                    <div class="resource-card" data-tilt>
+                        <img src="assets/logos/papara-logo.png" alt="Papara Logo" class="resource-logo">
+                        <h3>Neden Papara?</h3>
+                        <p>Türkiye’den gezginler için biçilmiş kaftan. Hızlı, masrafsız ödemeler yolda!</p>
+                        <a href="https://www.papara.com/?ref=ESATCAN" class="resource-btn">PAPARA’YI AÇ</a>
+                    </div>
+                </div>
+                <div class="button-row">
+                    <a href="seyahat-bankalari.html" class="standalone-btn">Seyahat Bankaları 101</a>
+                </div>
+            </div>
+
+            <!-- Ekipman -->
+            <div class="resource-category">
+                <h2>Seyahat Ekipmanı</h2>
+                <div class="resource-grid">
+                    <div class="resource-card" data-tilt>
+                        <img src="assets/logos/osprey-logo.png" alt="Osprey Logo" class="resource-logo">
+                        <h3>Neden Osprey?</h3>
+                        <p>15 yıldır Osprey çantalarla geziyorum. Dayanıklı, rahat ve en iyisi!</p>
+                        <a href="https://www.osprey.com/?aff=ESATCAN" class="resource-btn">OSPREY’İ AÇ</a>
+                    </div>
+                    <div class="resource-card" data-tilt>
+                        <img src="assets/logos/nomatic-logo.png" alt="Nomatic Logo" class="resource-logo">
+                        <h3>Neden Nomatic?</h3>
+                        <p>El bagajı gezginler için şık ve fonksiyonel. Çamaşır torbası hayat kurtarır!</p>
+                        <a href="https://www.nomatic.com/?r=ESATCAN" class="resource-btn">NOMATIC’İ AÇ</a>
+                    </div>
+                    <div class="resource-card" data-tilt>
+                        <img src="assets/logos/rei-logo.png" alt="REI Logo" class="resource-logo">
+                        <h3>Neden REI?</h3>
+                        <p>Her türlü ekipman için geniş seçenekler, uygun fiyatlar. Topluluğa katıl, indirim kap!</p>
+                        <a href="https://www.rei.com/?aff=ESATCAN" class="resource-btn">REI’Yİ AÇ</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Turlar -->
+            <div class="resource-category">
+                <h2>Tur Rezervasyonu</h2>
+                <div class="resource-grid">
+                    <div class="resource-card" data-tilt>
+                        <img src="assets/logos/airbnb-logo.png" alt="Airbnb Experiences Logo" class="resource-logo">
+                        <h3>Neden Airbnb Experiences?</h3>
+                        <p>Rehber kitaplardan sıyrıl! İtalyan naberle makarna yap ya da NYC’de grafiti turuna çık.</p>
+                        <a href="https://www.airbnb.com/experiences?r=ESATCAN" class="resource-btn">AIRBNB EXPERIENCES’I AÇ</a>
+                    </div>
+                    <div class="resource-card" data-tilt>
+                        <img src="assets/logos/getyourguide-logo.png" alt="GetYourGuide Logo" class="resource-logo">
+                        <h3>Neden GetYourGuide?</h3>
+                        <p>Turlar ve aktiviteler için harika bir platform. Her zaman yeni bir macera bulursun!</p>
+                        <a href="https://www.getyourguide.com/?partner_id=ESATCAN" class="resource-btn">GETYOURGUIDE’I AÇ</a>
+                    </div>
+                    <div class="resource-card" data-tilt>
+                        <img src="assets/logos/viator-logo.png" alt="Viator Logo" class="resource-logo">
+                        <h3>Neden Viator?</h3>
+                        <p>Dünyanın her yerinde eşsiz turlar. Gerçekten sıradışı deneyimler için favorim!</p>
+                        <a href="https://www.viator.com/?pid=ESATCAN" class="resource-btn">VIATOR’U AÇ</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seyahat Hileleri -->
+            <div class="resource-category">
+                <h2>Seyahat Hileleri</h2>
+                <div class="resource-grid">
+                    <div class="resource-card" data-tilt>
+                        <img src="assets/logos/couchsurfing-logo.png" alt="Couchsurfing Logo" class="resource-logo">
+                        <h3>Neden Couchsurfing?</h3>
+                        <p>Yerel halkla bağ kur, ücretsiz konakla. Yeni kültürler keşfetmenin en güzel yolu!</p>
+                        <a href="https://www.couchsurfing.com/?ref=ESATCAN" class="resource-btn">COUCHSURFING’I AÇ</a>
+                    </div>
+                    <div class="resource-card" data-tilt>
+                        <img src="assets/logos/blablacar-logo.png" alt="BlaBlaCar Logo" class="resource-logo">
+                        <h3>Neden BlaBlaCar?</h3>
+                        <p>Bütçe dostu yolculuklar için araç paylaşımı. Hem tasarruf et hem yeni insanlarla tanış!</p>
+                        <a href="https://www.blablacar.com/?r=ESATCAN" class="resource-btn">BLABLACAR’I AÇ</a>
+                    </div>
+                    <div class="resource-card" data-tilt>
+                        <img src="assets/logos/trustedhousesitters-logo.png" alt="TrustedHousesitters Logo" class="resource-logo">
+                        <h3>Neden TrustedHousesitters?</h3>
+                        <p>Ev bakımı karşılığı ücretsiz kal. Ev konforunda, bütçesiz gez!</p>
+                        <a href="https://www.trustedhousesitters.com/?ref=ESATCAN" class="resource-btn discount">%20 İNDİRİM</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- İş Bulma -->
+            <div class="resource-category">
+                <h2>Yolda İş Bul</h2>
+                <div class="resource-grid">
+                    <div class="resource-card" data-tilt>
+                        <img src="assets/logos/mytefl-logo.png" alt="myTEFL Logo" class="resource-logo">
+                        <h3>Neden myTEFL?</h3>
+                        <p>Yurtdışında İngilizce öğretmek ister misin? myTEFL sertifikası kapıları açar!</p>
+                        <a href="https://www.mytefl.com/?promo=ESAT50" class="resource-btn discount">%50 İNDİRİM</a>
+                    </div>
+                    <div class="resource-card" data-tilt>
+                        <img src="assets/logos/worldpackers-logo.png" alt="Worldpackers Logo" class="resource-logo">
+                        <h3>Neden Worldpackers?</h3>
+                        <p>Gönüllü işlerle dünyayı gez. Hem tasarruf et hem dünyaya katkıda bulun!</p>
+                        <a href="https://www.worldpackers.com/?ref=ESAT10" class="resource-btn discount">$10 İNDİRİM</a>
+                    </div>
+                    <div class="resource-card" data-tilt>
+                        <img src="assets/logos/workaway-logo.png" alt="Workaway Logo" class="resource-logo">
+                        <h3>Neden Workaway?</h3>
+                        <p>Konaklama ve yemek karşılığı iş bul. Worldpackers’a alternatif, ikisini de kullan!</p>
+                        <a href="https://www.workaway.info/?aff=ESATCAN" class="resource-btn discount">%20 İNDİRİM</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="../assets/logowhite.svg" alt="Esat Can Travel Logo">
+            </div>
+            <div class="footer-links">
+                <h3>Bağlantılar</h3>
+                <ul>
+                    <li><a href="../index.html">Anasayfa</a></li>
+                    <li><a href="../blog/index.html">Blog</a></li>
+                    <li><a href="../destinasyonlar/index.html">Destinasyonlar</a></li>
+                    <li><a href="../seyahat-ekipmani/index.html">Seyahat Ekipmanı</a></li>
+                    <li><a href="../kaynaklar/index.html">Kaynaklar</a></li>
+                    <li><a href="../kurslar/index.html">Kurslar</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Bizi Takip Et</h3>
+                <a href="https://instagram.com/esat.can"><img src="../assets/instagram-white.svg" alt="Instagram"></a>
+                <a href="https://x.com/esatcaan"><img src="../assets/twitter-white.svg" alt="Twitter"></a>
+                <a href="https://facebook.com/esatcann"><img src="../assets/facebook-white.svg" alt="Facebook"></a>
+            </div>
+            <div class="footer-contact">
+                <h3>İletişim</h3>
+                <p>E-posta: <a href="mailto:info@esatcantravel.com">info@esatcantravel.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Esat Can Travel. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="assets/script-kaynaklar.js"></script>
+</body>
+</html>

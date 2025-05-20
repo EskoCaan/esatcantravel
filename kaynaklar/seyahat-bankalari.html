@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seyahat Bankaları - Esat Can Travel</title>
+    <link rel="stylesheet" href="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/seyahat-bankalari.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/favicon.svg">
+</head>
+<body>
+    <header class="menu-bar">
+        <div class="menu-container">
+            <div class="logo">
+                <a href="file:///Users/esat/Desktop/Websitem/index.html" onclick="handleLogoClick(event)"><img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/logo.svg" alt="Esat Can Travel Logo" id="menu-logo"></a>
+            </div>
+            <div class="hamburger" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li class="dropdown">
+                        <a href="file:///Users/esat/Desktop/Websitem/index.html">Başlangıç</a>
+                        <div class="dropdown-content">
+                            <a href="file:///Users/esat/Desktop/Websitem/selam.html">Selam!</a>
+                            <a href="file:///Users/esat/Desktop/Websitem/manifesto.html">Manifesto</a>
+                            <a href="file:///Users/esat/Desktop/Websitem/baslangic/bizimle-calisin.html">Benimle Çalışın</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="file:///Users/esat/Desktop/Websitem/blog/index.html">Blog</a>
+                        <div class="dropdown-content">
+                            <a href="file:///Users/esat/Desktop/Websitem/blog/butce-seyahati.html">Bütçe Seyahati</a>
+                            <a href="file:///Users/esat/Desktop/Websitem/blog/kisisel-gelisim.html">Kişisel Gelişim</a>
+                            <a href="file:///Users/esat/Desktop/Websitem/blog/calisma-ve-seyahat.html">Çalışma ve Seyahat</a>
+                            <a href="file:///Users/esat/Desktop/Websitem/blog/yeni-gonderiler.html">Yeni Gönderiler</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="file:///Users/esat/Desktop/Websitem/destinasyonlar/index.html">Destinasyonlar</a>
+                        <div class="dropdown-content">
+                            <div class="region-menu"><a href="#" class="region-link">Avrupa</a><div class="sub-menu"><a href="file:///Users/esat/Desktop/Websitem/destinations/france/france.html">Fransa</a><a href="file:///Users/esat/Desktop/Websitem/destinations/iceland/iceland.html">İzlanda</a><a href="file:///Users/esat/Desktop/Websitem/destinations/italy/italy.html">İtalya</a><a href="file:///Users/esat/Desktop/Websitem/destinations/spain/spain.html">İspanya</a><a href="file:///Users/esat/Desktop/Websitem/destinations/uk/uk.html">Birleşik Krallık</a><a href="file:///Users/esat/Desktop/Websitem/destinations/avrupa-daha-fazlasi.html">Avrupa'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Güneydoğu Asya</a><div class="sub-menu"><a href="file:///Users/esat/Desktop/Websitem/destinations/indonesia/indonesia.html">Endonezya</a><a href="file:///Users/esat/Desktop/Websitem/destinations/myanmar/myanmar.html">Myanmar</a><a href="file:///Users/esat/Desktop/Websitem/destinations/philippines/philippines.html">Filipinler</a><a href="file:///Users/esat/Desktop/Websitem/destinations/thailand/thailand.html">Tayland</a><a href="file:///Users/esat/Desktop/Websitem/destinations/vietnam/vietnam.html">Vietnam</a><a href="file:///Users/esat/Desktop/Websitem/destinations/guneydogu-asya-daha-fazlasi.html">Güneydoğu Asya'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Güney Amerika</a><div class="sub-menu"><a href="file:///Users/esat/Desktop/Websitem/destinations/argentina/argentina.html">Arjantin</a><a href="file:///Users/esat/Desktop/Websitem/destinations/brazil/brazil.html">Brezilya</a><a href="file:///Users/esat/Desktop/Websitem/destinations/colombia/colombia.html">Kolombiya</a><a href="file:///Users/esat/Desktop/Websitem/destinations/ecuador/ecuador.html">Ekvador</a><a href="file:///Users/esat/Desktop/Websitem/destinations/peru/peru.html">Peru</a><a href="file:///Users/esat/Desktop/Websitem/destinations/guney-amerika-daha-fazlasi.html">Güney Amerika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Orta Amerika</a><div class="sub-menu"><a href="file:///Users/esat/Desktop/Websitem/destinations/belize/belize.html">Belize</a><a href="file:///Users/esat/Desktop/Websitem/destinations/costa-rica/costa-rica.html">Kosta Rika</a><a href="file:///Users/esat/Desktop/Websitem/destinations/cuba/cuba.html">Küba</a><a href="file:///Users/esat/Desktop/Websitem/destinations/guatemala/guatemala.html">Guatemala</a><a href="file:///Users/esat/Desktop/Websitem/destinations/panama/panama.html">Panama</a><a href="file:///Users/esat/Desktop/Websitem/destinations/orta-amerika-daha-fazlasi.html">Orta Amerika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Asya</a><div class="sub-menu"><a href="file:///Users/esat/Desktop/Websitem/destinations/india/india.html">Hindistan</a><a href="file:///Users/esat/Desktop/Websitem/destinations/japan/japan.html">Japonya</a><a href="file:///Users/esat/Desktop/Websitem/destinations/pakistan/pakistan.html">Pakistan</a><a href="file:///Users/esat/Desktop/Websitem/destinations/south-korea/south-korea.html">Güney Kore</a><a href="file:///Users/esat/Desktop/Websitem/destinations/sri-lanka/sri-lanka.html">Sri Lanka</a><a href="file:///Users/esat/Desktop/Websitem/destinations/asya-daha-fazlasi.html">Asya'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Kuzey Amerika</a><div class="sub-menu"><a href="file:///Users/esat/Desktop/Websitem/destinations/canada/canada.html">Kanada</a><a href="file:///Users/esat/Desktop/Websitem/destinations/mexico/mexico.html">Meksika</a><a href="file:///Users/esat/Desktop/Websitem/destinations/usa/usa.html">Amerika</a><a href="file:///Users/esat/Desktop/Websitem/destinations/kuzey-amerika-daha-fazlasi.html">Kuzey Amerika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Okyanusya</a><div class="sub-menu"><a href="file:///Users/esat/Desktop/Websitem/destinations/australia/australia.html">Avustralya</a><a href="file:///Users/esat/Desktop/Websitem/destinations/new-zealand/new-zealand.html">Yeni Zelanda</a><a href="file:///Users/esat/Desktop/Websitem/destinations/pacific-islands/pacific-islands.html">Pasifik Adaları</a><a href="file:///Users/esat/Desktop/Websitem/destinations/okyanusya-daha-fazlasi.html">Okyanusya'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Afrika</a><div class="sub-menu"><a href="file:///Users/esat/Desktop/Websitem/destinations/morocco/morocco.html">Fas</a><a href="file:///Users/esat/Desktop/Websitem/destinations/mozambique/mozambique.html">Mozambik</a><a href="file:///Users/esat/Desktop/Websitem/destinations/namibia/namibia.html">Namibya</a><a href="file:///Users/esat/Desktop/Websitem/destinations/south-africa/south-africa.html">Güney Afrika</a><a href="file:///Users/esat/Desktop/Websitem/destinations/tanzania/tanzania.html">Tanzanya</a><a href="file:///Users/esat/Desktop/Websitem/destinations/afrika-daha-fazlasi.html">Afrika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Orta Doğu</a><div class="sub-menu"><a href="file:///Users/esat/Desktop/Websitem/destinations/egypt/egypt.html">Mısır</a><a href="file:///Users/esat/Desktop/Websitem/destinations/iran/iran.html">İran</a><a href="file:///Users/esat/Desktop/Websitem/destinations/israel/israel.html">İsrail</a><a href="file:///Users/esat/Desktop/Websitem/destinations/lebanon/lebanon.html">Lübnan</a><a href="file:///Users/esat/Desktop/Websitem/destinations/turkey/turkey.html">Türkiye</a><a href="file:///Users/esat/Desktop/Websitem/destinations/orta-dogu-daha-fazlasi.html">Orta Doğu'nun daha fazlası</a></div></div>
+                        </div>
+                    </li>
+                    <li><a href="file:///Users/esat/Desktop/Websitem/seyahat-ekipmani/index.html">Seyahat Ekipmanı</a></li>
+                    <li class="dropdown">
+                        <a href="file:///Users/esat/Desktop/Websitem/kaynaklar/index.html">Kaynaklar</a>
+                        <div class="dropdown-content">
+                            <a href="file:///Users/esat/Desktop/Websitem/kaynaklar/seyahat-sigortasi.html">Seyahat Sigortası</a>
+                            <a href="file:///Users/esat/Desktop/Websitem/kaynaklar/esimler.html">eSIM'ler</a>
+                            <a href="file:///Users/esat/Desktop/Websitem/kaynaklar/seyahat-bankalari.html">Seyahat Bankaları</a>
+                        </div>
+                    </li>
+                    <li><a href="file:///Users/esat/Desktop/Websitem/kurslar/index.html">Kurslar</a></li>
+                </ul>
+            </nav>
+            <div class="right-section">
+                <a href="file:///Users/esat/Desktop/Websitem/join.html" class="join-btn">Çeteye Katıl</a>
+                <img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/search.svg" alt="Search" class="search-icon" onclick="toggleSearch()">
+            </div>
+        </div>
+        <div class="search-bar" id="search-bar" style="display: none;">
+            <form id="search-form" onsubmit="handleSearch(event)">
+                <input type="text" placeholder="Blogda ara..." id="search-input" oninput="suggestKeywords()">
+                <div id="suggestions" class="suggestions-box"></div>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Bölümü -->
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1 class="welcome-text">Seyahat Bankaları</h1>
+                <h2>Seyahat İçin En İyi Bankalar 2025</h2>
+                <p>Uluslararası para transferlerini kolay ve uygun maliyetli hale getiren bankaları keşfet!</p>
+            </div>
+        </div>
+
+        <!-- İçerik Bölümü -->
+        <section class="resources-content">
+            <div class="content-section">
+                <h2>Wise (En İyisi)</h2>
+                <p>Wise, gezginler ve sırt çantalı gezginler için en iyi bankacılık seçeneklerinden biri. Piyasadaki en düşük ücretlerden bazılarını ve harika döviz kurlarını sunarak, uluslararası para transferlerini basit, hızlı ve uygun maliyetli hale getiriyor – artık gereksiz harcamalara son!</p>
+                <a href="https://wise.com" target="_blank" class="action-btn">Wise’ı Kontrol Et</a>
+            </div>
+
+            <div class="content-section">
+                <h2>Papara</h2>
+                <p>Papara, Türk banka hesaplarından yurtdışına para gönderirken en iyi seçeneklerden biridir. Gezginler, seyahat ederken gittikleri ülkelerde bazen sınırlı olsa da hesap veya dijital hesap açma imkânı bulabiliyor. Örneğin, Endonezya’da GoPay, yalnızca pasaportla hesap açılmasına izin veriyor. Bu durumda, pasaportla kimlik doğrulamasını tamamlayarak GoPay hesabı açabilirsin; bu, yerel ödemeler için oldukça pratik bir çözüm sunuyor. Ayrıca, bazı ülkelerde benzer dijital cüzdanlar (örneğin, OVO veya DANA) da pasaportla açılabiliyor, ancak her ülkenin kuralları farklılık gösterebilir; bu yüzden varış öncesi araştırma yapmak önemli.</p>
+                <a href="https://www.papara.com" target="_blank" class="action-btn">Papara’yı Kontrol Et</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/logowhite.svg" alt="Esat Can Travel Logo">
+            </div>
+            <div class="footer-links">
+                <h3>Bağlantılar</h3>
+                <ul>
+                    <li><a href="file:///Users/esat/Desktop/Websitem/index.html">Anasayfa</a></li>
+                    <li><a href="file:///Users/esat/Desktop/Websitem/blog/index.html">Blog</a></li>
+                    <li><a href="file:///Users/esat/Desktop/Websitem/destinasyonlar/index.html">Destinasyonlar</a></li>
+                    <li><a href="file:///Users/esat/Desktop/Websitem/seyahat-ekipmani/index.html">Seyahat Ekipmanı</a></li>
+                    <li><a href="file:///Users/esat/Desktop/Websitem/kaynaklar/index.html">Kaynaklar</a></li>
+                    <li><a href="file:///Users/esat/Desktop/Websitem/kurslar/index.html">Kurslar</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Bizi Takip Et</h3>
+                <a href="https://instagram.com/esat.can"><img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/instagram-white.svg" alt="Instagram"></a>
+                <a href="https://x.com/esatcaan"><img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/twitter-white.svg" alt="Twitter"></a>
+                <a href="https://facebook.com/esatcann"><img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/facebook-white.svg" alt="Facebook"></a>
+            </div>
+            <div class="footer-contact">
+                <h3>İletişim</h3>
+                <p>E-posta: <a href="mailto:info@esatcantravel.com">info@esatcantravel.com</a></p>
+                <p>Telefon: +90 555 123 45 67</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Esat Can Travel. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/seyahat-bankalari.js"></script>
+</body>
+</html>

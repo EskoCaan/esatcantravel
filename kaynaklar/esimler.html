@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eSIM'ler - Esat Can Travel</title>
+    <link rel="stylesheet" href="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/style-esimler.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/favicon.svg">
+</head>
+<body>
+    <header class="menu-bar">
+        <div class="menu-container">
+            <div class="logo">
+                <a href="file:///Users/esat/Desktop/Websitem/index.html" onclick="handleLogoClick(event)"><img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/logo.svg" alt="Esat Can Travel Logo" id="menu-logo"></a>
+            </div>
+            <div class="hamburger" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li class="dropdown">
+                        <a href="file:///Users/esat/Desktop/Websitem/index.html">Başlangıç</a>
+                        <div class="dropdown-content">
+                            <a href="file:///Users/esat/Desktop/Websitem/selam.html">Selam!</a>
+                            <a href="file:///Users/esat/Desktop/Websitem/manifesto.html">Manifesto</a>
+                            <a href="file:///Users/esat/Desktop/Websitem/baslangic/bizimle-calisin.html">Benimle Çalışın</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="file:///Users/esat/Desktop/Websitem/blog/index.html">Blog</a>
+                        <div class="dropdown-content">
+                            <a href="file:///Users/esat/Desktop/Websitem/blog/butce-seyahati.html">Bütçe Seyahati</a>
+                            <a href="file:///Users/esat/Desktop/Websitem/blog/kisisel-gelisim.html">Kişisel Gelişim</a>
+                            <a href="file:///Users/esat/Desktop/Websitem/blog/calisma-ve-seyahat.html">Çalışma ve Seyahat</a>
+                            <a href="file:///Users/esat/Desktop/Websitem/blog/yeni-gonderiler.html">Yeni Gönderiler</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="file:///Users/esat/Desktop/Websitem/destinasyonlar/index.html">Destinasyonlar</a>
+                        <div class="dropdown-content">
+                            <div class="region-menu"><a href="#" class="region-link">Avrupa</a><div class="sub-menu"><a href="file:///Users/esat/Desktop/Websitem/destinations/france/france.html">Fransa</a><a href="file:///Users/esat/Desktop/Websitem/destinations/iceland/iceland.html">İzlanda</a><a href="file:///Users/esat/Desktop/Websitem/destinations/italy/italy.html">İtalya</a><a href="file:///Users/esat/Desktop/Websitem/destinations/spain/spain.html">İspanya</a><a href="file:///Users/esat/Desktop/Websitem/destinations/uk/uk.html">Birleşik Krallık</a><a href="file:///Users/esat/Desktop/Websitem/destinations/avrupa-daha-fazlasi.html">Avrupa'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Güneydoğu Asya</a><div class="sub-menu"><a href="file:///Users/esat/Desktop/Websitem/destinations/indonesia/indonesia.html">Endonezya</a><a href="file:///Users/esat/Desktop/Websitem/destinations/myanmar/myanmar.html">Myanmar</a><a href="file:///Users/esat/Desktop/Websitem/destinations/philippines/philippines.html">Filipinler</a><a href="file:///Users/esat/Desktop/Websitem/destinations/thailand/thailand.html">Tayland</a><a href="file:///Users/esat/Desktop/Websitem/destinations/vietnam/vietnam.html">Vietnam</a><a href="file:///Users/esat/Desktop/Websitem/destinations/guneydogu-asya-daha-fazlasi.html">Güneydoğu Asya'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Güney Amerika</a><div class="sub-menu"><a href="file:///Users/esat/Desktop/Websitem/destinations/argentina/argentina.html">Arjantin</a><a href="file:///Users/esat/Desktop/Websitem/destinations/brazil/brazil.html">Brezilya</a><a href="file:///Users/esat/Desktop/Websitem/destinations/colombia/colombia.html">Kolombiya</a><a href="file:///Users/esat/Desktop/Websitem/destinations/ecuador/ecuador.html">Ekvador</a><a href="file:///Users/esat/Desktop/Websitem/destinations/peru/peru.html">Peru</a><a href="file:///Users/esat/Desktop/Websitem/destinations/guney-amerika-daha-fazlasi.html">Güney Amerika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Orta Amerika</a><div class="sub-menu"><a href="file:///Users/esat/Desktop/Websitem/destinations/belize/belize.html">Belize</a><a href="file:///Users/esat/Desktop/Websitem/destinations/costa-rica/costa-rica.html">Kosta Rika</a><a href="file:///Users/esat/Desktop/Websitem/destinations/cuba/cuba.html">Küba</a><a href="file:///Users/esat/Desktop/Websitem/destinations/guatemala/guatemala.html">Guatemala</a><a href="file:///Users/esat/Desktop/Websitem/destinations/panama/panama.html">Panama</a><a href="file:///Users/esat/Desktop/Websitem/destinations/orta-amerika-daha-fazlasi.html">Orta Amerika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Asya</a><div class="sub-menu"><a href="file:///Users/esat/Desktop/Websitem/destinations/india/india.html">Hindistan</a><a href="file:///Users/esat/Desktop/Websitem/destinations/japan/japan.html">Japonya</a><a href="file:///Users/esat/Desktop/Websitem/destinations/pakistan/pakistan.html">Pakistan</a><a href="file:///Users/esat/Desktop/Websitem/destinations/south-korea/south-korea.html">Güney Kore</a><a href="file:///Users/esat/Desktop/Websitem/destinations/sri-lanka/sri-lanka.html">Sri Lanka</a><a href="file:///Users/esat/Desktop/Websitem/destinations/asya-daha-fazlasi.html">Asya'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Kuzey Amerika</a><div class="sub-menu"><a href="file:///Users/esat/Desktop/Websitem/destinations/canada/canada.html">Kanada</a><a href="file:///Users/esat/Desktop/Websitem/destinations/mexico/mexico.html">Meksika</a><a href="file:///Users/esat/Desktop/Websitem/destinations/usa/usa.html">Amerika</a><a href="file:///Users/esat/Desktop/Websitem/destinations/kuzey-amerika-daha-fazlasi.html">Kuzey Amerika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Okyanusya</a><div class="sub-menu"><a href="file:///Users/esat/Desktop/Websitem/destinations/australia/australia.html">Avustralya</a><a href="file:///Users/esat/Desktop/Websitem/destinations/new-zealand/new-zealand.html">Yeni Zelanda</a><a href="file:///Users/esat/Desktop/Websitem/destinations/pacific-islands/pacific-islands.html">Pasifik Adaları</a><a href="file:///Users/esat/Desktop/Websitem/destinations/okyanusya-daha-fazlasi.html">Okyanusya'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Afrika</a><div class="sub-menu"><a href="file:///Users/esat/Desktop/Websitem/destinations/morocco/morocco.html">Fas</a><a href="file:///Users/esat/Desktop/Websitem/destinations/mozambique/mozambique.html">Mozambik</a><a href="file:///Users/esat/Desktop/Websitem/destinations/namibia/namibia.html">Namibya</a><a href="file:///Users/esat/Desktop/Websitem/destinations/south-africa/south-africa.html">Güney Afrika</a><a href="file:///Users/esat/Desktop/Websitem/destinations/tanzania/tanzania.html">Tanzanya</a><a href="file:///Users/esat/Desktop/Websitem/destinations/afrika-daha-fazlasi.html">Afrika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Orta Doğu</a><div class="sub-menu"><a href="file:///Users/esat/Desktop/Websitem/destinations/egypt/egypt.html">Mısır</a><a href="file:///Users/esat/Desktop/Websitem/destinations/iran/iran.html">İran</a><a href="file:///Users/esat/Desktop/Websitem/destinations/israel/israel.html">İsrail</a><a href="file:///Users/esat/Desktop/Websitem/destinations/lebanon/lebanon.html">Lübnan</a><a href="file:///Users/esat/Desktop/Websitem/destinations/turkey/turkey.html">Türkiye</a><a href="file:///Users/esat/Desktop/Websitem/destinations/orta-dogu-daha-fazlasi.html">Orta Doğu'nun daha fazlası</a></div></div>
+                        </div>
+                    </li>
+                    <li><a href="file:///Users/esat/Desktop/Websitem/seyahat-ekipmani/index.html">Seyahat Ekipmanı</a></li>
+                    <li class="dropdown">
+                        <a href="file:///Users/esat/Desktop/Websitem/kaynaklar/index.html">Kaynaklar</a>
+                        <div class="dropdown-content">
+                            <a href="file:///Users/esat/Desktop/Websitem/kaynaklar/seyahat-sigortasi.html">Seyahat Sigortası</a>
+                            <a href="file:///Users/esat/Desktop/Websitem/kaynaklar/esimler.html">eSIM'ler</a>
+                            <a href="file:///Users/esat/Desktop/Websitem/kaynaklar/seyahat-bankalari.html">Seyahat Bankaları</a>
+                        </div>
+                    </li>
+                    <li><a href="file:///Users/esat/Desktop/Websitem/kurslar/index.html">Kurslar</a></li>
+                </ul>
+            </nav>
+            <div class="right-section">
+                <a href="file:///Users/esat/Desktop/Websitem/join.html" class="join-btn">Çeteye Katıl</a>
+                <img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/search.svg" alt="Search" class="search-icon" onclick="toggleSearch()">
+            </div>
+        </div>
+        <div class="search-bar" id="search-bar" style="display: none;">
+            <form id="search-form" onsubmit="handleSearch(event)">
+                <input type="text" placeholder="Blogda ara..." id="search-input" oninput="suggestKeywords()">
+                <div id="suggestions" class="suggestions-box"></div>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Bölümü -->
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1 class="welcome-text">eSIM'ler</h1>
+                <h2>En İyi Uluslararası SIM Kartlar (2025 Rehberi)</h2>
+                <p>Seyahat ederken bağlantıda kalmanın en kolay yolu! En iyi uluslararası SIM kartlarla dünyayı keşfet.</p>
+            </div>
+        </div>
+
+        <!-- İçerik Bölümü -->
+        <section class="resources-content">
+            <!-- Div 1: Giriş Metni -->
+            <div class="content-section intro-section">
+                <h2>Uluslararası SIM Kartlar Neden Önemli?</h2>
+                <p>Seyahat ederken SIM kartlarla uğraşmak tam bir baş belası olabilir. Her yeni bir yere vardığımda, aynı ritüeli tekrarlamak zorunda kalıyorum: ya havalimanında fahiş fiyatlara bir SIM kart alıyorum ya da bağlantısız bir şekilde şehre gidip yerel bir sağlayıcı bulmaya çalışıyorum. Şehirdeyken ise yabancı bir yerde kaybolma riskiyle birlikte yerel SIM sağlayıcılarını, planlarını araştırmak zorunda kalıyorum. Bu, bir tatili başlatmanın ideal yolu değil ve ben yeni ülkelerde SIM kart aramak için harcadığım saatleri sayamıyorum bile.</p>
+                <p>İşte bu yüzden en iyi uluslararası SIM kartlardan birini satın almak EN İYİ yol!</p>
+                <p>Şimdi, işin doğrusunu söyleyeyim: Daha ucuz seyahat SIM kartları olsa da, bunlar tam olarak ucuz değil. On kezden dokuzunda, yerel bir SIM kart her zaman bütçe gezgini için daha ucuz bir seçenek oluyor.</p>
+                <p>Belki her zaman bağlı olması gereken bir dijital göçebeyim, belki tatildeyken yoğun iş görüşmeleri yapan şık iş kıyafetli bir iş insanıyım ya da belki (benim gibi) SIM kart değiştirmekten bıkmışımdır.</p>
+                <p>Her durumda, bu liste piyasadaki en iyi uluslararası SIM kartları içeriyor! Tüm araştırmaları ben yaptım ve kapsamlı bir uluslararası SIM kart incelemesi hazırladım. Haydi bağlantıya geçelim!</p>
+                <p>Anneni ara, hadi!</p>
+                <img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/foto1.jpg" alt="Seyahat eden bir kişi telefonla konuşuyor" class="content-image">
+            </div>
+
+            <!-- Not Kutusu -->
+            <div class="note-box">
+                <p>Esat Can Travel, benim desteğinizle ayakta duruyor. Bağlantılarım üzerinden tıklayarak satın aldığınızda küçük bir komisyon kazanıyorum ve bu, ücretsiz içerikler üretmemi sağlıyor 🙂 <a href="#">Daha fazla bilgi edin.</a></p>
+            </div>
+
+            <!-- Div 2: Karşılaştırmalar -->
+            <div class="content-section">
+                <h2>En İyi Uluslararası SIM Kartlar</h2>
+                <p>Bu, tüm liste değil ama benim kişisel seçtiğim, her biri farklı bir nişe hizmet eden en iyi uluslararası SIM kartlar.</p>
+                <div class="sim-comparison">
+                    <div class="sim-card">
+                        <img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/onesim.jpg" alt="OneSimCard logosu ve görseli">
+                        <h3>Genel Olarak En İyi Uluslararası SIM Kart</h3>
+                        <h4>OneSimCard</h4>
+                        <ul>
+                            <li>e-SIM ve Geleneksel SIM'ler mevcut</li>
+                            <li>Geniş ve güvenilir kapsama alanı</li>
+                            <li>Düşük SIM satın alma ücretleri</li>
+                            <li>$9.95 – $39.95</li>
+                        </ul>
+                        <a href="https://www.onesimcard.com" target="_blank" class="action-btn">OneSim'de Görüntüle</a>
+                    </div>
+                    <div class="sim-card">
+                        <img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/jetpac.jpg" alt="Jetpac logosu ve görseli">
+                        <h3>Uluslararası Seyahat İçin En İyi Veri Odaklı eSIM Kartı</h3>
+                        <h4>Jetpac</h4>
+                        <ul>
+                            <li>Mükemmel değer – $1'den başlar</li>
+                            <li>Çeşitli paket seçenekleri mevcut</li>
+                            <li>Harika kapsama alanı</li>
+                            <li>$1 – $80</li>
+                        </ul>
+                        <a href="https://www.jetpacglobal.com" target="_blank" class="action-btn">Jetpac'te Görüntüle</a>
+                    </div>
+                    <div class="sim-card">
+                        <img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/worldsim.jpg" alt="WorldSIM logosu ve görseli">
+                        <h3>Dünya Çapında SIM Kart</h3>
+                        <h4>WorldSIM</h4>
+                        <ul>
+                            <li>$67.50</li>
+                        </ul>
+                        <a href="https://www.worldsim.com" target="_blank" class="action-btn">WorldSIM'de Görüntüle</a>
+                    </div>
+                    <div class="sim-card">
+                        <img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/nomadsim.jpg" alt="Nomad logosu ve görseli">
+                        <h3>Bir Diğer Harika eSIM Sağlayıcısı</h3>
+                        <h4>Nomad</h4>
+                        <ul>
+                            <li>Kullanımı kolay veri odaklı SIM</li>
+                            <li>Geniş kapsama alanı</li>
+                            <li>Sadece eSIM...</li>
+                            <li>$10 – $100</li>
+                        </ul>
+                        <a href="https://www.getnomad.app" target="_blank" class="action-btn">Nomad'da Görüntüle</a>
+                    </div>
+                    <div class="sim-card">
+                        <img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/holafly.jpg" alt="Holafly logosu ve görseli">
+                        <h3>Veri Odaklı Harika Bir Seçenek</h3>
+                        <h4>Holafly</h4>
+                        <ul>
+                            <li>Satın alma ücreti yok</li>
+                            <li>Sadece veri odaklı</li>
+                            <li>100+ ülke kapsama alanı</li>
+                        </ul>
+                        <a href="https://www.holafly.com" target="_blank" class="action-btn">Holafly'de Görüntüle</a>
+                    </div>
+                    <div class="sim-card">
+                        <img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/travelsim.jpg" alt="TravelSim logosu ve görseli">
+                        <h3>Uygun Fiyatlı Bir Seçenek</h3>
+                        <h4>TravelSim</h4>
+                        <ul>
+                            <li>$10 satın alma ücreti</li>
+                            <li>B Bölgesi için daha ucuz</li>
+                            <li>170+ ülke kapsama alanı</li>
+                        </ul>
+                        <a href="https://www.travelsim.com" target="_blank" class="action-btn">TravelSim'de Görüntüle</a>
+                    </div>
+                    <div class="sim-card">
+                        <img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/gosim.jpg" alt="GoSim logosu ve görseli">
+                        <h3>Geniş Kapsama Alanlı SIM</h3>
+                        <h4>GoSim</h4>
+                        <ul>
+                            <li>$17 satın alma ücreti</li>
+                            <li>Daha pahalı fiyatlar</li>
+                            <li>210+ ülke kapsama alanı</li>
+                        </ul>
+                        <a href="https://www.gosim.com" target="_blank" class="action-btn">GoSim'de Görüntüle</a>
+                    </div>
+                    <div class="sim-card">
+                        <img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/keepgo.jpg" alt="KeepGo logosu ve görseli">
+                        <h3>Uluslararası Seyahat İçin Veri SIM Kartı</h3>
+                        <h4>KeepGo Lifetime World SIM Card</h4>
+                        <ul>
+                            <li>Güvenilir bağlantı</li>
+                            <li>Fiyat kesintilerine yatkın</li>
+                            <li>100+ ülke kapsama alanı</li>
+                        </ul>
+                        <a href="https://www.amazon.com/KeepGo-Lifetime-World-SIM-Card/dp/B01N7JKE8S" target="_blank" class="action-btn">Amazon'da Görüntüle</a>
+                    </div>
+                    <div class="sim-card">
+                        <img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/surfroam.jpg" alt="Surfroam logosu ve görseli">
+                        <h3>Veri Odaklı Esnek SIM</h3>
+                        <h4>Surfroam</h4>
+                        <ul>
+                            <li>$15/$20 satın alma ücreti</li>
+                            <li>Düzenli kontrol gerektirir</li>
+                            <li>200+ ülke kapsama alanı</li>
+                        </ul>
+                        <a href="https://www.surfroam.com" target="_blank" class="action-btn">Surfroam'da Görüntüle</a>
+                    </div>
+                    <div class="sim-card">
+                        <img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/gigsky.jpg" alt="GigSky logosu ve görseli">
+                        <h3>Ucuz Veri Odaklı SIM</h3>
+                        <h4>GigSky</h4>
+                        <ul>
+                            <li>$10 satın alma ücreti</li>
+                            <li>Daha ucuz fiyatlar</li>
+                            <li>190+ ülke kapsama alanı</li>
+                        </ul>
+                        <a href="https://www.gigsky.com" target="_blank" class="action-btn">GigSky'de Görüntüle</a>
+                    </div>
+                    <div class="sim-card">
+                        <img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/orange.jpg" alt="Orange Holiday Europe logosu ve görseli">
+                        <h3>Avrupa İçin En İyi Uluslararası SIM Kart</h3>
+                        <h4>Orange Holiday Europe Prepaid SIM Card</h4>
+                        <ul>
+                            <li>Avrupa'da son derece güvenilir</li>
+                            <li>İki haftalık tatil için yeterli</li>
+                            <li>30 Avrupa ülkesi kapsama alanı</li>
+                            <li>$46.99</li>
+                        </ul>
+                        <a href="https://www.amazon.com/Orange-Holiday-Europe-Prepaid-SIM/dp/B07WWTJ2J2" target="_blank" class="action-btn">Amazon'da Görüntüle</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Div 3: Uluslararası SIM Kart Nedir? -->
+            <div class="content-section">
+                <h2>Uluslararası SIM Kart Nedir?</h2>
+                <p>Uluslararası SIM’ler, roaming SIM’ler, seyahat SIM kartları… Adı ne olursa olsun, hepsi aynı anlama gelir: her yerden bağlantı kurmamı sağlayan bir SIM kart! Guesthouse’da kalmak istemediğimde pizza sipariş edebilen bir karttır, değil mi? İşte uluslararası SIM kart budur, “her yerden” bağlantı sağlar.</p>
+                <p>Neden “her yer” kelimesini tırnak içine aldım?</p>
+                <p>Çünkü bu “her yer” oldukça değişken bir kavram. “Her yer” aslında uluslararası SIM’in kapsadığı ülkeleri ifade eder. Yine de bazı seyahat SIM sağlayıcıları 200’den fazla ülkeyi kapsar.</p>
+                <p>Ancak şunu da belirteyim, dünyada sadece 195 ülke var, bu yüzden bu rakamları nasıl hesapladılar bilmiyorum. Hâlâ emin değilsem, <a href="file:///Users/esat/Desktop/Websitem/kaynaklar/localvsinternational.html">yerel ve uluslararası SIM kartlar rehberime</a> göz atabilirim.</p>
+                <h3>Uluslararası SIM Kart Nasıl Çalışır?</h3>
+                <p>Çok teknik olmadan açıklayayım: Uluslararası bir SIM kart, belirli bir ağa programlanmamıştır. Farklı coğrafi konumlarda bir dizi ağ üzerinde çalışacak şekilde programlanmıştır – özellikle GSM (Global Systems of Management Communications) çerçevesini kullanan ağlar.</p>
+                <p>Bu yüzden uluslararası bir SIM kartla cep telefonumu kullanmak için telefonumun şu özelliklere sahip olması gerekir:</p>
+                <ul>
+                    <li>GSM uyumlu (birçok telefon zaten öyledir).</li>
+                    <li>Kilitli olmamalı, yani bir sağlayıcıya bağlı olmamalı.</li>
+                </ul>
+                <p>Telefonumun kilitli olmadığından emin olmalıyım, yoksa yeni bir telefon almadan önce bu durumu kontrol etmeliyim.</p>
+                <div class="image-container">
+                    <img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/foto2.jpg" alt="Uluslararası SIM kartla bağlantıda olan bir gezgin">
+                    <p class="image-caption">Uluslararası SIM kartla tam olarak böyle oluyorum.</p>
+                </div>
+                <p>Temel olarak, küresel SIM kartlar, seyahat ettiğim ülkedeki yerel bir ağa bağlanır… Tabii ki, rızalı bir şekilde.</p>
+                <p>Bu yüzden kapsama alanı uluslararası SIM’ler arasında büyük farklılıklar gösterir. Bazı SIM kartlar dünya çapında kullanım için tasarlanmıştır ve buna göre programlanmıştır. Bazı SIM kartlar ise Asya, ABD veya Avrupa gibi belirli bölgelerde uluslararası dolaşım için uygundur (genellikle Avrupa’nın üçte birini kapsama dışı bırakır).</p>
+                <p>Örneğin, çoğu durumda Güneydoğu Asya için farklı bir SIM kart gerekir, ancak Avrupa’da büyük olasılıkla aynı kartı kullanabilirim.</p>
+                <h3>Kimler Uluslararası SIM Kart Satın Almaktan Faydalanır?</h3>
+                <p>Uzun süreli sırt çantalı gezginler için pek faydalı değil. Yerel bir SIM kart, herhangi bir ülkede uzun süreli kalışlar için neredeyse her zaman daha ucuz, pratik ve güvenilirdir. Ne yazık ki, gerçekten ucuz uluslararası SIM kartlar henüz mevcut değil.</p>
+                <p>Ülke ülke gezenler ise ön ödemeli bir uluslararası SIM kart almayı düşünebilir. Avrupa’da sadece 1-2 haftalık kullanım için 8 kez yerel SIM kart almak kimsenin eğlence anlayışı değildir, özellikle veri kullanımıyla ilgileniyorsam ve plastiğin okyanusa karışmasını önemsiyorsam.</p>
+                <p>Dijital göçebe yaşam tarzı yaşayanlar da bir seyahat SIM’inden faydalanabilir. Yerel bir SIM, bir ülkede uzun süreli kalışlar için daha uygun olsa da, bazen seçenekler veya hizmet kötü olabilir ve bazen uzun transit süreleri geçiriyorum ki bu, birkaç saat çalışmak için mükemmel bir zamandır. Ayrıca, iki SIM kartım olamayacağına dair bir kural yok. Ön ödemeli bir uluslararası SIM kart burada en iyi seçenek olabilir (bununla ilgili daha fazla bilgi aşağıda).</p>
+                <p>Son olarak, iş insanları veya sık sık kısa geziler yapanlar uluslararası bir seyahat SIM kartından faydalanabilir. Burada biraz genelleme yapıyor olabilirim ama bu kişilerin maliyetlerle daha az ilgilendiğini düşünüyorum. Ayrıca, yurtdışı kullanımı için çoğu SIM kart, satın alınan krediler için 1 yıllık geçerlilik sunar, bu yüzden SIM’imizi bir geziden sonra saklayıp bir sonrakinde tekrar kullanabilirim.</p>
+            </div>
+
+            <!-- Div 4: En İyi SIM Kartlar -->
+            <div class="content-section">
+                <h2>Seyahat Edenler İçin En İyi SIM Kartlar</h2>
+                <p>Listeye, bir SIM kartın yapması gereken her şeyi yapan en iyi uluslararası SIM kartlarla başlıyorum: arama, mesajlaşma ve mobil veri. Bu SIM’ler dünya genelinde oldukça geniş bir kapsama alanına sahip ve dünyadaki çoğu gezgin için fazlasıyla yeterli.</p>
+                <p>Tabii ki, bu uluslararası SIM kart karşılaştırmasında bir “en iyisi” olmalı. İşte ilk sırada – en iyi seyahat SIM kartı!</p>
+                <h3>#1 En İyi Uluslararası Fiziksel SIM Kart – OneSim</h3>
+                <div class="sim-details">
+                    <div class="sim-text">
+                        <p>Peki, OneSim’i en iyi seyahat SIM kartı yapan nedir? İlk birkaç aday arasında ince bir fark var ama OneSim, çok yönlülük, fiyatlandırma ve güvenilirlik kombinasyonuyla öne çıkıyor.</p>
+                        <p>Öncelikle, farklı seyahat ihtiyaçlarıma hitap eden birden fazla SIM kart sunuyorlar, bunlara 2 harika e-SIM seçeneği DAHİL (ancak bunlarla sınırlı değil):</p>
+                        <ul>
+                            <li><strong>OneSimCard e-Sim World ($9.95’ten başlayan fiyatlarla)</strong> – 150 ülkede kapsama ve AB numaralarından ücretsiz gelen aramalar.</li>
+                            <li><strong>OneSimCard e-Sim Asiana ($9.95’ten başlayan fiyatlarla)</strong> – Asya ve Okyanusya için özel olarak tasarlanmış. Veri paketleri mevcut.</li>
+                        </ul>
+                        <p>Eğer telefonum henüz e-SIM desteklemiyorsa, endişelenmeyin çünkü OneSim aynı zamanda plastik SIM’ler için harika fırsatlar sunuyor:</p>
+                        <ul>
+                            <li><strong>OneSimCard Universal ($29.95)</strong> – 200’den fazla ülkede kapsama ancak daha sınırlı veri hizmeti (50+ ülke).</li>
+                            <li><strong>OneSimCard Expedition ($34.95)</strong> – OneSim Universal seyahat SIM ile aynı kapsama alanını sunar ancak çok daha fazla veri kapsama alanı ile. Kaşifler için ideal seçim.</li>
+                        </ul>
+                        <h4>OneSim Nasıl Çalışır?</h4>
+                        <p>Herhangi bir OneSIM roaming SIM kartı satın aldığımda $10 bonus kredi alıyorum, ancak bu bittiğinde veri planları satın almaya devam etmem gerekir. Fiyatlar, kullandığım seyahat SIM kartına ve bulunduğum ülkeye göre büyük ölçüde değişir, bu yüzden bu fiyatları kontrol etmeliyim.</p>
+                        <p>İki numara alıyorum: bir Avrupa (Estonya) numarası ve ABD, İngiltere, Avustralya, veya Kanada’dan bir seçim. Birincil Avrupa numarasından gelen aramalar, geniş bir ülke kapsama alanında ücretsizdir veya aksi takdirde $0.25/dakikadan başlar. Giden aramalar da $0.25/dakikadan başlar (konuma bağlı olarak) ve metin almak ücretsizdir.</p>
+                        <p>Gündelik veri fiyatları oldukça yüksek, $0.20/MB’den başlıyor. Ancak, bu ön ödemeli uluslararası SIM kartı bu kadar iyi yapan şey, maliyetlerimi düşürmek için birçok seçenek sunmasıdır. Bölge veya bölgeye göre bir/iki haftadan bir aya kadar veri paketleri satın alabilirim. Ayrıca arama fiyatları için indirim planları ve paketler de mevcut. Bu, OneSIM’i veri için en iyi uluslararası SIM kartlardan biri yapıyor.</p>
+                        <h4>Peki, buna değer mi?</h4>
+                        <p>Piyasadaki en ucuz uluslararası SIM kart olmasa da, sunduğu seçenekler sayesinde SIM’imi dünya seyahat ihtiyaçlarıma göre özelleştirebilir ve maliyetleri en aza indirebilirim. Ek bir bonus olarak, OneSim uzun süredir piyasada, bu yüzden pazarı iyi biliyorlar.</p>
+                        <p>Güvenilir bir hizmet sunuyorlar ve müşterilerini memnun etmek için bir sürü güzel ekstra sağlıyorlar. Eğer en iyi uluslararası seyahat SIM kartını arıyorsam, OneSIM kesinlikle düşünmem gereken bir seçenek.</p>
+                        <a href="https://www.onesimcard.com" target="_blank" class="action-btn">OneSim'de Görüntüle</a>
+                    </div>
+                    <div class="sim-image">
+                        <img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/onesim2.jpg" alt="OneSimCard kullanım örneği">
+                    </div>
+                </div>
+                <h3>#2 En İyi Küresel eSIM Sağlayıcısı – Jetpac</h3>
+                <div class="sim-details">
+                    <div class="sim-text">
+                        <p>Jetpac, Singapur merkezli bir eSIM şirketidir ve gezginler ile dijital göçebeler için tasarlanmış paketler sunar. Birçok ülkede kullanılabilen çeşitli veri planları sunuyorlar ve hizmet, uçuşum geciktiğinde ücretsiz havalimanı lounge erişimi gibi özellikler içeriyor.</p>
+                        <p>Jetpac eSIM’ler, Apple, Samsung ve Google’ın birçok modeli de dahil olmak üzere bir dizi cihazla uyumludur. Jetpac eSIM’ini etkinleştirmek için kullanıcıların Jetpac web sitesinde veya uygulamasında kaydolması, seyahat ihtiyaçlarına uygun bir plan seçmesi ve ardından cihazlarına eSIM’i yüklemek için bir QR kodu taraması gerekir.</p>
+                        <p>Jetpac’i, kurulum kolaylığı ve güvenilir bağlantısı için seviyorum. Jetpac, uluslararası seyahatlerde sürekli mobil veri erişimi sağlayarak birden fazla destinasyonda bağlantıda kalmamı sağlıyor. Yerel numaralar sunmasalar da, paketlerinin çoğunun varsayılan olarak 30 gün sürmesini seviyorum, böylece sadece ne kadar veri ihtiyacım olduğuna odaklanabiliyorum.</p>
+                        <h4>Jetpac Nasıl Çalışır?</h4>
+                        <p>Jetpac dünya çapında eSIM kartı, farklı veri paketleriyle gelir. Veri, 100 MB’dan başlayarak etkileyici bir 25 GB’a kadar çeşitli planlarla artırılabilir! Veri artırımlarının fiyatları şöyledir:</p>
+                        <ul>
+                            <li>1 GB – $1</li>
+                            <li>3 GB – $10</li>
+                            <li>5 GB – $25</li>
+                            <li>10 GB – $30</li>
+                            <li>25 GB – $38</li>
+                        </ul>
+                        <h4>Peki, buna değer mi?</h4>
+                        <p>Kesinlikle. Yani, hadi ama, bir dolardan başlıyor ve dünya genelinde çalışıyor. Genel olarak, bunu piyasadaki en iyi ön ödemeli uluslararası veri odaklı SIM kartlardan biri olarak değerlendiriyorum.</p>
+                        <p>Eğer modern bir telefonum varsa (iPhone 11, Samsung Galaxy S21 vb. veya üzeri), büyük olasılıkla eSIM uyumludur. Bu, fiziksel bir SIM karta ihtiyacım olmadığı, bunun yerine Jetpac üzerinden bir eSIM’i bir uygulama indirir gibi indirebileceğim anlamına geliyor.</p>
+                        <p><strong>Özel Teklif!</strong> Benim sevgili Esat Can Travel okuyucularım, TBB10 özel indirim kodunu kullanarak Jetpac paketlerinde %10 indirim alabilir.</p>
+                        <a href="https://www.jetpacglobal.com" target="_blank" class="action-btn">Jetpac'te Görüntüle</a>
+                    </div>
+                    <div class="sim-image">
+                        <img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/jetpac.jpg" alt="Jetpac kullanım örneği">
+                    </div>
+                </div>
+                <h3>#3 Harika Küresel eSIM Paketi – Nomad</h3>
+                <div class="sim-details">
+                    <div class="sim-text">
+                        <p>Evet! Ön ödemeli veri paketleri yok, sözleşme saçmalıkları yok, uzun bir Netflix ve tuvalet seansı için yerleştiğimde veri tükenmesi yok: Nomad her şeyi Pura Vida tutuyor!</p>
+                        <p>Sadece veri sunar ve 52 veya 82 ülkede kapsama sağlıyor, hangi paketi seçtiğime bağlı olarak. Peki, nasıl işliyor?</p>
+                        <h4>Nomad Nasıl Çalışır?</h4>
+                        <p>Oldukça basit. Önce 52 mi yoksa 82 ülke sürümünü mü istediğime karar veriyorum, ardından SIM’in ne kadar süre dayanmasını istediğimi (180 veya 365 gün) ve ne kadar veriye ihtiyacım olduğunu seçiyorum.</p>
+                        <p>Ancak şunu belirtmeliyim ki telefon numarası, arama süresi ve SMS dahil değildir. Bu, eSIM’lerde oldukça standarttır.</p>
+                        <h4>Peki, buna değer mi?</h4>
+                        <p>Tamam, dünyada 197’den fazla ülke olduğunu fark etmiş olabilirim, bu yüzden bunun gerçekten “küresel” bir eSIM olup olmadığı tartışmalı. Ayrıca, $170 bana bir yıllık SIM sağlasa da, 50 GB kotasını bir yıldan çok önce tüketebilirim, bu yüzden birkaç ek paket almayı beklemeliyim.</p>
+                        <p>Aksi takdirde, kapsama alanı KeepGo’yu önemli ölçüde geride bırakıyor ve çoğu durumda Nomad, satın alabileceğim en iyi uluslararası veri eSIM kartlarından biri olabilir. Dünya genelinde hemen hemen her yerde bağlantıda kalmak için en basit seçimdir.</p>
+                        <a href="https://www.getnomad.app" target="_blank" class="action-btn">Nomad'da Görüntüle</a>
+                    </div>
+                    <div class="sim-image">
+                        <img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/nomadsim.jpg" alt="Nomad kullanım örneği">
+                    </div>
+                </div>
+                <h3>#4 Dünya Çapında SIM Kart – WorldSIM</h3>
+                <div class="sim-details">
+                    <div class="sim-text">
+                        <p>WorldSIM, bu listede yer alıyor çünkü piyasada bazı nispeten harika fiyatlarla dikkat çekiyor. Ancak bazı gerçekten tuhaf derecede pahalı fiyatları da var. Bu yüzden, uluslararası dolaşım için en iyi SIM kartı olduğuna kesinlikle inanmıyorum.</p>
+                        <h4>WorldSIM Nasıl Çalışır?</h4>
+                        <p>WorldSIM uluslararası SIM kartının satın alma ücreti yoktur – harika! Ancak çok heyecanlanmadan önce, satın alırken bir kredi yüklemesi gerektiriyor.</p>
+                        <p>Bu, minimum $33.75 artı kargo ücreti ödeyeceğim anlamına geliyor. $67.50 kredi için kargo ücretsizdir.</p>
+                        <p>Giden aramalar, mesajlar ve veri kullanımı için gündelik fiyatlar, şu ana kadar bulduğum en ucuz fiyatlar ve OneSim’in kapsama dışı bıraktığı bazı ülkelerde veri kapsama alanı sunuyor. Ancak, çeşitli ülkelerde gelen aramalar için fiyatlar şok edici derecede yüksek.</p>
+                        <p>Veri paketlerine gelince? Hiçbir fikrim yok. Web siteleri bu sayfa için çalışmıyor ve sonsuz bir yükleme döngüsünde takılı kalmış.</p>
+                        <h4>Peki, buna değer mi?</h4>
+                        <p>Benim hissim hayır. Ama sen bilirsin. Uluslararası bir SIM kart satın alma kararımı bir yabancının sezgilerine dayandırmamalıyım. Yine de benim hissim hayır.</p>
+                        <p>Hafif aldatıcı “$0” SIM satın alma ücreti, kullanışsız ve bozuk web sitesi ve farkında olmadan bir tüketiciyi tuzağa düşürebilecek tuhaf gelen arama fiyatları arasında, WorldSIM incelemesi, piyasadaki diğer seçeneklerle karşılaştırıldığında satın almaya değer bir uluslararası SIM kart gibi hissettirmiyor.</p>
+                        <a href="https://www.worldsim.com" target="_blank" class="action-btn">WorldSIM'de Görüntüle</a>
+                    </div>
+                    <div class="sim-image">
+                        <img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/worldsim.jpg" alt="WorldSIM kullanım örneği">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Div 5: Hızlı Karşılaştırma Tablosu -->
+            <div class="content-section">
+                <h2>Her SIM Kartın Hızlı Bir İncelemesi</h2>
+                <p>İşte son bir seksi özet için bir tablo!</p>
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>SIM Kart</th>
+                                <th>Satın Alma Ücreti</th>
+                                <th>Fiyatlar</th>
+                                <th>Aramalar ve Mesajlar?</th>
+                                <th>Kapsama Alanı</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>OneSim</td>
+                                <td>$20/$30/$35</td>
+                                <td>Standart</td>
+                                <td>Evet</td>
+                                <td>200+ ülke – veri için daha az</td>
+                            </tr>
+                            <tr>
+                                <td>Holafly</td>
+                                <td>–</td>
+                                <td>–</td>
+                                <td>Hayır, sadece veri</td>
+                                <td>100+ ülke</td>
+                            </tr>
+                            <tr>
+                                <td>TravelSim</td>
+                                <td>$10</td>
+                                <td>B Bölgesi destinasyonları için biraz daha ucuz</td>
+                                <td>Evet</td>
+                                <td>170+ ülke</td>
+                            </tr>
+                            <tr>
+                                <td>GoSim</td>
+                                <td>$17</td>
+                                <td>Daha pahalı</td>
+                                <td>Evet</td>
+                                <td>210+ ülke – muhtemelen veri için daha az</td>
+                            </tr>
+                            <tr>
+                                <td>WorldSIM</td>
+                                <td>$27 minimum</td>
+                                <td>Tuhaf</td>
+                                <td>Evet</td>
+                                <td>190+ ülke</td>
+                            </tr>
+                            <tr>
+                                <td>KeepGo</td>
+                                <td>$49</td>
+                                <td>En ucuz değil ama adil</td>
+                                <td>Hayır, sadece veri</td>
+                                <td>100+ ülke</td>
+                            </tr>
+                            <tr>
+                                <td>Surfroam</td>
+                                <td>$15/$20</td>
+                                <td>Genellikle ucuz ama düzenli kontrol gerektirir</td>
+                                <td>Hayır, sadece veri</td>
+                                <td>200+ ülke</td>
+                            </tr>
+                            <tr>
+                                <td>GigSky</td>
+                                <td>$10</td>
+                                <td>Daha ucuz</td>
+                                <td>Hayır, sadece veri</td>
+                                <td>190+ ülke</td>
+                            </tr>
+                            <tr>
+                                <td>Orange Holiday Europe</td>
+                                <td>$28/$47.50</td>
+                                <td>İyi</td>
+                                <td>Evet</td>
+                                <td>30 Avrupa ülkesi</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Div 6: Sıkça Sorulan Sorular -->
+            <div class="content-section faq-section">
+                <h2>Seyahat SIM Kartları Hakkında Sıkça Sorulan Sorular</h2>
+                <p>Dünyanın en iyi seyahat SIM kartları hakkında sıkça sorulan bazı sorular...</p>
+                <div class="faq-item">
+                    <h3 onclick="toggleFAQ(this)">Uluslararası SIM kartımı nasıl etkinleştiririm?</h3>
+                    <div class="faq-content">
+                        <p>Her uluslararası SIM, nasıl kurulum yapacağım ve SIM’imi nasıl yükleyeceğimle ilgili ayrıntılı talimatlarla gelir. Herhangi bir aksilik yaşamamak için her şeyi evden çıkmadan önce ayarlamak her zaman iyi bir fikir.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 onclick="toggleFAQ(this)">Uluslararası SIM ne anlama gelir?</h3>
+                    <div class="faq-content">
+                        <p>Uluslararası SIM, telefonumu uluslararası olarak kullanmamı sağlayan ve küresel taşıyıcılara bağlanan bir SIM kart türüdür.</p>
+                        <p>Bazı SIM’ler normal şekilde arama yapmama olanak tanır, bazıları ise sadece veri planları sunar.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 onclick="toggleFAQ(this)">Uluslararası seyahat için en iyi SIM kart hangisidir?</h3>
+                    <div class="faq-content">
+                        <p>Uluslararası seyahat için en iyi SIM’lerden bazıları şunlardır: <a href="https://www.onesimcard.com" target="_blank">OneSim</a>, <a href="https://www.getnomad.app" target="_blank">Nomad</a>, <a href="https://www.keepgo.com" target="_blank">KeepGo</a> ve <a href="https://www.travelsim.com" target="_blank">TravelSim</a>.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 onclick="toggleFAQ(this)">Uluslararası SIM kartların geçerlilik süresi dolar mı?</h3>
+                    <div class="faq-content">
+                        <p>Bu listedeki SIM’lerin çoğu, en az yılda bir kez yeniden yükleme yapmamı gerektirir, ancak bunu yaptığımda tüm verilerim kullanılabilir kalır.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Div 7: Buy Me a Coffee -->
+            <div class="content-section buy-me-a-coffee">
+                <h2>Bana Bir Kahve Al!</h2>
+                <p>Birkaç sevgili okuyucum, bağlantılarım üzerinden rezervasyon yapmaya alternatif olarak doğrudan destek için bir bahşiş kavanozu oluşturmamı önerdi. İşte bu yüzden bir tane oluşturdum!</p>
+                <p>Artık Esat Can Travel’a bir kahve alabilirsin. Eğer içeriğimi beğeniyor ve gezilerini planlamak için kullanıyorsan, bu, takdirini göstermenin çok güzel bir yolu 🙂</p>
+                <img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/foto3.jpg" alt="Teşekkür eden bir görsel" class="content-image">
+                <p>Teşekkür ederim <3</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/logowhite.svg" alt="Esat Can Travel Logo">
+            </div>
+            <div class="footer-links">
+                <h3>Bağlantılar</h3>
+                <ul>
+                    <li><a href="file:///Users/esat/Desktop/Websitem/index.html">Anasayfa</a></li>
+                    <li><a href="file:///Users/esat/Desktop/Websitem/blog/index.html">Blog</a></li>
+                    <li><a href="file:///Users/esat/Desktop/Websitem/destinasyonlar/index.html">Destinasyonlar</a></li>
+                    <li><a href="file:///Users/esat/Desktop/Websitem/seyahat-ekipmani/index.html">Seyahat Ekipmanı</a></li>
+                    <li><a href="file:///Users/esat/Desktop/Websitem/kaynaklar/index.html">Kaynaklar</a></li>
+                    <li><a href="file:///Users/esat/Desktop/Websitem/kurslar/index.html">Kurslar</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Bizi Takip Et</h3>
+                <a href="https://instagram.com/esat.can"><img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/instagram-white.svg" alt="Instagram"></a>
+                <a href="https://x.com/esatcaan"><img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/twitter-white.svg" alt="Twitter"></a>
+                <a href="https://facebook.com/esatcann"><img src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/facebook-white.svg" alt="Facebook"></a>
+            </div>
+            <div class="footer-contact">
+                <h3>İletişim</h3>
+                <p>E-posta: <a href="mailto:info@esatcantravel.com">info@esatcantravel.com</a></p>
+                <p>Telefon: +90 555 123 45 67</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Esat Can Travel. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="file:///Users/esat/Desktop/Websitem/kaynaklar/assets/script-esimler.js"></script>
+</body>
+</html>
