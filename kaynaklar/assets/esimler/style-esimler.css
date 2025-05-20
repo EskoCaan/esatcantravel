@@ -308,7 +308,7 @@ body {
 /* Hero bölümü */
 .hero-section {
     height: 100vh;
-    background: url('file:///Users/esat/Desktop/Websitem/kaynaklar/assets/esimler-bg.jpg') no-repeat center;
+    background: url('assets/esimler/esimler-bg.jpg') no-repeat center;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -865,16 +865,64 @@ tr:hover {
 
     .main-nav li {
         margin: 10px 0;
+        width: 100%;
+        text-align: center;
     }
 
-    .main-nav a {
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        background: none;
+        padding: 0;
+    }
+
+    .menu-bar.scrolled .dropdown-content {
+        background: none;
+    }
+
+    .dropdown-content a {
+        padding: 10px;
         color: #fff;
-        padding: 10px 20px;
+    }
+
+    .menu-bar.scrolled .dropdown-content a {
+        color: #fff;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #333;
+        padding-left: 20px;
+    }
+
+    .sub-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        background: none;
+        padding: 0;
+    }
+
+    .menu-bar.scrolled .sub-menu {
+        background: none;
+    }
+
+    .sub-menu a {
+        padding: 10px;
+        color: #fff;
+    }
+
+    .menu-bar.scrolled .sub-menu a {
+        color: #fff;
+    }
+
+    .sub-menu a:hover {
+        background-color: #333;
+        padding-left: 20px;
     }
 
     .right-section {
-        display: flex;
-        align-items: center;
+        display: none;
     }
 
     .hero-section {
@@ -883,7 +931,11 @@ tr:hover {
 
     .hero-section.scrolled {
         height: 30vh;
-        max-height: 250px;
+        max-height: 200px;
+    }
+
+    .hero-content {
+        padding: 20px;
     }
 
     .welcome-text {
@@ -891,19 +943,44 @@ tr:hover {
     }
 
     .hero-content h2 {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .hero-content p {
         font-size: 16px;
     }
 
+    .resources-content {
+        padding: 15px;
+    }
+
+    .content-section {
+        padding: 20px;
+    }
+
     .content-section h2 {
         font-size: 28px;
     }
 
+    .content-section h3 {
+        font-size: 20px;
+    }
+
+    .content-section h4 {
+        font-size: 18px;
+    }
+
     .sim-comparison {
         grid-template-columns: 1fr;
+    }
+
+    .sim-card {
+        min-height: 320px;
+    }
+
+    .sim-details {
+        flex-direction: column;
+        gap: 10px;
     }
 
     .footer-container {
@@ -925,12 +1002,29 @@ tr:hover {
 }
 
 @media (max-width: 480px) {
+    .menu-container {
+        padding: 10px 15px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .hero-section {
+        height: 70vh;
+    }
+
+    .hero-section.scrolled {
+        height: 25vh;
+        max-height: 150px;
+    }
+
     .welcome-text {
         font-size: 28px;
     }
 
     .hero-content h2 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .hero-content p {
@@ -945,25 +1039,39 @@ tr:hover {
         font-size: 24px;
     }
 
-    .sim-card {
-        min-height: 260px;
-        padding: 12px;
+    .content-section h3 {
+        font-size: 18px;
     }
 
-    .sim-card h3 {
-        font-size: 14px;
-    }
-
-    .sim-card h4 {
+    .content-section h4 {
         font-size: 16px;
     }
 
-    .sim-card ul li {
-        font-size: 12px;
+    .sim-card {
+        min-height: 300px;
     }
 
     .action-btn {
-        padding: 8px 15px;
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .footer-logo img {
+        height: 50px;
+    }
+
+    .footer-links h3,
+    .footer-social h3,
+    .footer-contact h3 {
+        font-size: 18px;
+    }
+
+    .footer-links a,
+    .footer-contact p {
+        font-size: 14px;
+    }
+
+    .footer-bottom p {
         font-size: 12px;
     }
 }
