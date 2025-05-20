@@ -305,7 +305,7 @@ body {
 /* Hero bölümü */
 .hero-section {
     height: 100vh;
-    background: url('selam-bg.jpg') no-repeat center/cover;
+    background: url('selam/selam-bg.jpg') no-repeat center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
