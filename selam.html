@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selam! - Esat Can Travel</title>
+    <link rel="stylesheet" href="assets/style-selam.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+    <header class="menu-bar">
+        <div class="menu-container">
+            <div class="logo">
+                <a href="index.html" onclick="handleLogoClick(event)"><img src="assets/logo.svg" alt="Esat Can Travel Logo" id="menu-logo"></a>
+            </div>
+            <div class="hamburger" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li class="dropdown">
+                        <a href="index.html">Başlangıç</a>
+                        <div class="dropdown-content">
+                            <a href="selam.html">Selam!</a>
+                            <a href="manifesto.html">Manifesto</a>
+                            <a href="baslangic/bizimle-calisin.html">Benimle Çalışın</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="blog/index.html">Blog</a>
+                        <div class="dropdown-content">
+                            <a href="blog/butce-seyahati.html">Bütçe Seyahati</a>
+                            <a href="blog/kisisel-gelisim.html">Kişisel Gelişim</a>
+                            <a href="blog/calisma-ve-seyahat.html">Çalışma ve Seyahat</a>
+                            <a href="blog/yeni-gonderiler.html">Yeni Gönderiler</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="destinasyonlar/index.html">Destinasyonlar</a>
+                        <div class="dropdown-content">
+                            <div class="region-menu"><a href="#" class="region-link">Avrupa</a><div class="sub-menu"><a href="destinations/france/france.html">Fransa</a><a href="destinations/iceland/iceland.html">İzlanda</a><a href="destinations/italy/italy.html">İtalya</a><a href="destinations/spain/spain.html">İspanya</a><a href="destinations/uk/uk.html">Birleşik Krallık</a><a href="destinations/avrupa-daha-fazlasi.html">Avrupa'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Güneydoğu Asya</a><div class="sub-menu"><a href="destinations/indonesia/indonesia.html">Endonezya</a><a href="destinations/myanmar/myanmar.html">Myanmar</a><a href="destinations/philippines/philippines.html">Filipinler</a><a href="destinations/thailand/thailand.html">Tayland</a><a href="destinations/vietnam/vietnam.html">Vietnam</a><a href="destinations/guneydogu-asya-daha-fazlasi.html">Güneydoğu Asya'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Güney Amerika</a><div class="sub-menu"><a href="destinations/argentina/argentina.html">Arjantin</a><a href="destinations/brazil/brazil.html">Brezilya</a><a href="destinations/colombia/colombia.html">Kolombiya</a><a href="destinations/ecuador/ecuador.html">Ekvador</a><a href="destinations/peru/peru.html">Peru</a><a href="destinations/guney-amerika-daha-fazlasi.html">Güney Amerika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Orta Amerika</a><div class="sub-menu"><a href="destinations/belize/belize.html">Belize</a><a href="destinations/costa-rica/costa-rica.html">Kosta Rika</a><a href="destinations/cuba/cuba.html">Küba</a><a href="destinations/guatemala/guatemala.html">Guatemala</a><a href="destinations/panama/panama.html">Panama</a><a href="destinations/orta-amerika-daha-fazlasi.html">Orta Amerika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Asya</a><div class="sub-menu"><a href="destinations/india/india.html">Hindistan</a><a href="destinations/japan/japan.html">Japonya</a><a href="destinations/pakistan/pakistan.html">Pakistan</a><a href="destinations/south-korea/south-korea.html">Güney Kore</a><a href="destinations/sri-lanka/sri-lanka.html">Sri Lanka</a><a href="destinations/asya-daha-fazlasi.html">Asya'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Kuzey Amerika</a><div class="sub-menu"><a href="destinations/canada/canada.html">Kanada</a><a href="destinations/mexico/mexico.html">Meksika</a><a href="destinations/usa/usa.html">Amerika</a><a href="destinations/kuzey-amerika-daha-fazlasi.html">Kuzey Amerika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Okyanusya</a><div class="sub-menu"><a href="destinations/australia/australia.html">Avustralya</a><a href="destinations/new-zealand/new-zealand.html">Yeni Zelanda</a><a href="destinations/pacific-islands/pacific-islands.html">Pasifik Adaları</a><a href="destinations/okyanusya-daha-fazlasi.html">Okyanusya'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Afrika</a><div class="sub-menu"><a href="destinations/morocco/morocco.html">Fas</a><a href="destinations/mozambique/mozambique.html">Mozambik</a><a href="destinations/namibia/namibia.html">Namibya</a><a href="destinations/south-africa/south-africa.html">Güney Afrika</a><a href="destinations/tanzania/tanzania.html">Tanzanya</a><a href="destinations/afrika-daha-fazlasi.html">Afrika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Orta Doğu</a><div class="sub-menu"><a href="destinations/egypt/egypt.html">Mısır</a><a href="destinations/iran/iran.html">İran</a><a href="destinations/israel/israel.html">İsrail</a><a href="destinations/lebanon/lebanon.html">Lübnan</a><a href="destinations/turkey/turkey.html">Türkiye</a><a href="destinations/orta-dogu-daha-fazlasi.html">Orta Doğu'nun daha fazlası</a></div></div>
+                        </div>
+                    </li>
+                    <li><a href="seyahat-ekipmani/index.html">Seyahat Ekipmanı</a></li>
+                    <li class="dropdown">
+                        <a href="kaynaklar/index.html">Kaynaklar</a>
+                        <div class="dropdown-content">
+                            <a href="kaynaklar/seyahat-sigortasi.html">Seyahat Sigortası</a>
+                            <a href="kaynaklar/esimler.html">eSIM'ler</a>
+                            <a href="kaynaklar/seyahat-bankalari.html">Seyahat Bankaları</a>
+                        </div>
+                    </li>
+                    <li><a href="kurslar/index.html">Kurslar</a></li>
+                </ul>
+            </nav>
+            <div class="right-section">
+                <a href="join.html" class="join-btn">Çeteye Katıl</a>
+                <img src="assets/search.svg" alt="Search" class="search-icon" onclick="toggleSearch()">
+            </div>
+        </div>
+        <div class="search-bar" id="search-bar" style="display: none;">
+            <form id="search-form" onsubmit="handleSearch(event)">
+                <input type="text" placeholder="Blogda ara..." id="search-input" oninput="suggestKeywords()">
+                <div id="suggestions" class="suggestions-box"></div>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1 class="welcome-text">Selam! Ben Esat, Dünya Vatandaşı</h1>
+                <h2>2018’den beri yollardayım, macera peşinde koşuyorum!</h2>
+                <p>Endonezya’nın vahşi rotalarından İstanbul’un enerjisine, her yerde bir izim var. Leman’la Bali’de yaşıyoruz, ama sırt çantamız hep hazır!</p>
+            </div>
+        </div>
+
+        <section class="selam-content">
+            <div class="intro-text">
+                <h2>Esat Can Travel’a Hoş Geldin!</h2>
+                <p>Ben Esat, 2018’den beri dünyayı karış karış gezen bir gezgin, girişimci ve macera bağımlısıyım. Seyahat, benim için sadece bir hobi değil; özgürlüğün, öğrenmenin ve kendini yeniden keşfetmenin yolu. İster Endonezya’nın vahşi yağmur ormanlarında kaybolayım, ister İstanbul’da Airbnb misafirlerini ağırlayayım, her an yeni bir hikaye yazıyorum.</p>
+                <p>Amacım, sana da bu özgürlüğü tattırmak. İster sıfır bütçeyle yola çık, ister ekstrem bir maceraya atıl, Esat Can Travel’da her gezgin için bir tüyo var. Hazır mısın, çeteye katıl!</p>
+            </div>
+
+            <div class="photo-gallery">
+                <h2>Yolda Geçen Hayatım</h2>
+                <div class="gallery-container">
+                    <div class="gallery-item" data-tilt>
+                        <img src="assets/selam/komodo.jpg" alt="Komodo Adaları">
+                        <div class="gallery-caption">Komodo Adaları: Ejderhalarla dans!</div>
+                    </div>
+                    <div class="gallery-item" data-tilt>
+                        <img src="assets/selam/sumatra.jpg" alt="Sumatra Yağmur Ormanları">
+                        <div class="gallery-caption">Sumatra: Vahşi doğanın kalbi</div>
+                    </div>
+                    <div class="gallery-item" data-tilt>
+                        <img src="assets/selam/ijen.jpg" alt="Ijen Volkanı">
+                        <div class="gallery-caption">Ijen: Mavi alevlerin büyüsü</div>
+                    </div>
+                    <div class="gallery-item" data-tilt>
+                        <img src="assets/selam/bali-airbnb.jpg" alt="Bali Airbnb">
+                        <div class="gallery-caption">Bali: Evim evin!</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-section">
+                <h2>Neden Bu Hayatı Seçtim?</h2>
+                <p>2018’de sırt çantamı alıp yola çıktığımda, tek bir hedefim vardı: Dünyayı kendi kurallarımla keşfetmek. O zamandan beri, Endonezya’nın Komodo Adaları’nda ejderhalarla yüz yüze geldim, Sumatra’nın yağmur ormanlarında kayboldum, Ijen’in mavi alevlerini izledim ve Papua’nın vahşi doğasında nefes aldım. Her macera, beni biraz daha özgür kıldı.</p>
+                <p>Ama sadece gezmekle yetinmedim. Endonezya’da ekstrem turlar düzenliyorum: Komodo, Bromo, Kalimantan, Flores... Liste uzar gider! Aynı zamanda 2022’den beri İstanbul ve Bali’de Airbnb işletiyorum. Misafirlerime ev değil, bir deneyim sunuyorum.</p>
+                <img src="assets/selam/esat-travel.jpg" alt="Esat yolda" class="story-image">
+            </div>
+
+            <div class="life-section">
+                <h2>Bugün Neredeyim?</h2>
+                <p>Ruh eşim Leman’la Bali’de yaşıyoruz. Burası bizim üssümüz, ama durduğumuz söylenemez. Hala dünyayı gezmeye devam ediyoruz, yeni rotalar keşfediyoruz. Nereli olduğum mu? Önemli değil, çünkü ben bir dünya vatandaşıyım. Kalbim her zaman yolda, elimde bir harita, aklımda yeni bir macera.</p>
+                <p>Esat Can Travel, sadece benim hikayem değil. Bu, senin de bir parçası olabileceğin bir topluluk. Bütçen az olabilir, ama hayallerin büyükse, doğru yerdesin!</p>
+            </div>
+
+            <div class="card-section">
+                <div class="profile-card">
+                    <img src="assets/selam/esat-profile.jpg" alt="Esat Can" class="card-image">
+                    <h3>Esat Can</h3>
+                    <p class="card-title">Gezgin, Girişimci, Özgür Ruh</p>
+                    <p>Macera bağımlısı, Endonezya’nın vahşi rotalarının rehberi ve ucuz gezmenin ustası. 2018’den beri yollarda, dünyayı cebinde kuruşla geziyor. İstanbul ve Bali’de Airbnb işletiyor, ekstrem turlar düzenliyor. Leman’la Bali’de yaşıyor, ama sırt çantası hep hazır.</p>
+                    <p><strong>Mantra:</strong> Özgürlük, konfor alanının bittiği yerde başlar.</p>
+                    <p><strong>Uzmanlık Alanları:</strong> Ekstrem Seyahat, Bütçe Gezileri, Endonezya Turları, Airbnb İşletmeciliği</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/esat.can"><img src="assets/instagram.svg" alt="Instagram"></a>
+                        <a href="https://www.x.com/esatcaan"><img src="assets/twitter.svg" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="assets/logowhite.svg" alt="Esat Can Travel Logo">
+            </div>
+            <div class="footer-links">
+                <h3>Bağlantılar</h3>
+                <ul>
+                    <li><a href="index.html">Anasayfa</a></li>
+                    <li><a href="blog/index.html">Blog</a></li>
+                    <li><a href="destinasyonlar/index.html">Destinasyonlar</a></li>
+                    <li><a href="seyahat-ekipmani/index.html">Seyahat Ekipmanı</a></li>
+                    <li><a href="kaynaklar/index.html">Kaynaklar</a></li>
+                    <li><a href="kurslar/index.html">Kurslar</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Bizi Takip Et</h3>
+                <a href="https://instagram.com/esat.can"><img src="assets/instagram-white.svg" alt="Instagram"></a>
+                <a href="https://x.com/esatcaan"><img src="assets/twitter-white.svg" alt="Twitter"></a>
+                <a href="https://facebook.com/esatcann"><img src="assets/facebook-white.svg" alt="Facebook"></a>
+            </div>
+            <div class="footer-contact">
+                <h3>İletişim</h3>
+                <p>E-posta: <a href="mailto:info@esatcantravel.com">info@esatcantravel.com</a></p>
+               
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Esat Can Travel. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="assets/script-selam.js"></script>
+</body>
+</html>
