@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esat Can Travel</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+    <header class="menu-bar">
+        <div class="menu-container">
+            <div class="logo">
+                <a href="index.html" onclick="handleLogoClick(event)">
+                    <img src="assets/logo.svg" alt="Esat Can Travel Logo" id="menu-logo">
+                </a>
+            </div>
+            <div class="hamburger" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li class="dropdown">
+                        <a href="index.html">Başlangıç</a>
+                        <div class="dropdown-content">
+                            <a href="selam.html">Selam!</a>
+                            <a href="manifesto.html">Manifesto</a>
+                            <a href="baslangic/bizimle-calisin.html">Benimle Çalışın</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="blog/index.html">Blog</a>
+                        <div class="dropdown-content">
+                            <a href="blog/butce-seyahati.html">Bütçe Seyahati</a>
+                            <a href="blog/kisisel-gelisim.html">Kişisel Gelişim</a>
+                            <a href="blog/calisma-ve-seyahat.html">Çalışma ve Seyahat</a>
+                            <a href="blog/yeni-gonderiler.html">Yeni Gönderiler</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="destinasyonlar/index.html">Destinasyonlar</a>
+                        <div class="dropdown-content">
+                            <div class="region-menu"><a href="#" class="region-link">Avrupa</a><div class="sub-menu"><a href="destinations/france/france.html">Fransa</a><a href="destinations/iceland/iceland.html">İzlanda</a><a href="destinations/italy/italy.html">İtalya</a><a href="destinations/spain/spain.html">İspanya</a><a href="destinations/uk/uk.html">Birleşik Krallık</a><a href="destinations/avrupa-daha-fazlasi.html">Avrupa'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Güneydoğu Asya</a><div class="sub-menu"><a href="destinations/indonesia/indonesia.html">Endonezya</a><a href="destinations/myanmar/myanmar.html">Myanmar</a><a href="destinations/philippines/philippines.html">Filipinler</a><a href="destinations/thailand/thailand.html">Tayland</a><a href="destinations/vietnam/vietnam.html">Vietnam</a><a href="destinations/guneydogu-asya-daha-fazlasi.html">Güneydoğu Asya'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Güney Amerika</a><div class="sub-menu"><a href="destinations/argentina/argentina.html">Arjantin</a><a href="destinations/brazil/brazil.html">Brezilya</a><a href="destinations/colombia/colombia.html">Kolombiya</a><a href="destinations/ecuador/ecuador.html">Ekvador</a><a href="destinations/peru/peru.html">Peru</a><a href="destinations/guney-amerika-daha-fazlasi.html">Güney Amerika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Orta Amerika</a><div class="sub-menu"><a href="destinations/belize/belize.html">Belize</a><a href="destinations/costa-rica/costa-rica.html">Kosta Rika</a><a href="destinations/cuba/cuba.html">Küba</a><a href="destinations/guatemala/guatemala.html">Guatemala</a><a href="destinations/panama/panama.html">Panama</a><a href="destinations/orta-amerika-daha-fazlasi.html">Orta Amerika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Asya</a><div class="sub-menu"><a href="destinations/india/india.html">Hindistan</a><a href="destinations/japan/japan.html">Japonya</a><a href="destinations/pakistan/pakistan.html">Pakistan</a><a href="destinations/south-korea/south-korea.html">Güney Kore</a><a href="destinations/sri-lanka/sri-lanka.html">Sri Lanka</a><a href="destinations/asya-daha-fazlasi.html">Asya'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Kuzey Amerika</a><div class="sub-menu"><a href="destinations/canada/canada.html">Kanada</a><a href="destinations/mexico/mexico.html">Meksika</a><a href="destinations/usa/usa.html">Amerika</a><a href="destinations/kuzey-amerika-daha-fazlasi.html">Kuzey Amerika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Okyanusya</a><div class="sub-menu"><a href="destinations/australia/australia.html">Avustralya</a><a href="destinations/new-zealand/new-zealand.html">Yeni Zelanda</a><a href="destinations/pacific-islands/pacific-islands.html">Pasifik Adaları</a><a href="destinations/okyanusya-daha-fazlasi.html">Okyanusya'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Afrika</a><div class="sub-menu"><a href="destinations/morocco/morocco.html">Fas</a><a href="destinations/mozambique/mozambique.html">Mozambik</a><a href="destinations/namibia/namibia.html">Namibya</a><a href="destinations/south-africa/south-africa.html">Güney Afrika</a><a href="destinations/tanzania/tanzania.html">Tanzanya</a><a href="destinations/afrika-daha-fazlasi.html">Afrika'nın daha fazlası</a></div></div>
+                            <div class="region-menu"><a href="#" class="region-link">Orta Doğu</a><div class="sub-menu"><a href="destinations/egypt/egypt.html">Mısır</a><a href="destinations/iran/iran.html">İran</a><a href="destinations/israel/israel.html">İsrail</a><a href="destinations/lebanon/lebanon.html">Lübnan</a><a href="destinations/turkey/turkey.html">Türkiye</a><a href="destinations/orta-dogu-daha-fazlasi.html">Orta Doğu'nun daha fazlası</a></div></div>
+                        </div>
+                    </li>
+                    <li><a href="seyahat-ekipmani/index.html">Seyahat Ekipmanı</a></li>
+                    <li class="dropdown">
+                        <a href="kaynaklar/index.html">Kaynaklar</a>
+                        <div class="dropdown-content">
+                            <a href="kaynaklar/seyahat-sigortasi.html">Seyahat Sigortası</a>
+                            <a href="kaynaklar/esimler.html">eSIM'ler</a>
+                            <a href="kaynaklar/seyahat-bankalari.html">Seyahat Bankaları</a>
+                        </div>
+                    </li>
+                    <li><a href="kurslar/index.html">Kurslar</a></li>
+                </ul>
+            </nav>
+            <div class="right-section">
+                <a href="join.html" class="join-btn">Çeteye Katıl</a>
+                <img src="assets/search.svg" alt="Search" class="search-icon" onclick="toggleSearch()">
+            </div>
+        </div>
+        <div class="search-bar" id="search-bar" style="display: none;">
+            <form id="search-form" onsubmit="handleSearch(event)">
+                <input type="text" placeholder="Blogda ara..." id="search-input" oninput="suggestKeywords()">
+                <div id="suggestions" class="suggestions-box"></div>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero-section" style="background-image: url('assets/bg.jpg');">
+            <div class="hero-content">
+                <h1 class="welcome-text">Esat Can Travel'a Hoş Geldiniz!</h1>
+                <h2>Günlük 10$'a Dünyayı Dolaşın</h2>
+                <p>Dünyayı parasız gezmek için en iyi ipuçlarımızı/püf noktalarımızı öğrenmek için en iyi sırt çantalı gezginlerin kutsal kitabının ücretsiz bir kopyasını alın.</p>
+                <form class="subscription-form" id="subscription-form" onsubmit="handleSubscription(event)">
+                    <input type="text" placeholder="Adınız" name="name" required>
+                    <input type="email" placeholder="E-postanız" name="email" required>
+                    <label>
+                        <input type="checkbox" name="consent" required>
+                        <span>Kişisel bilgilerimin Esat Can Travel'ın <a href="#" class="privacy-link">Gizlilik Politikası</a> uyarınca işlenmesine izin veriyorum.</span>
+                    </label>
+                    <button type="submit">ÜCRETSİZ Kopyanızı Alın</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="intro-section">
+            <div class="intro-image">
+                <img src="assets/div2.svg" alt="Esat Can">
+            </div>
+            <div class="intro-content">
+                <h2>Seyahat hayatını değiştirebilir</h2>
+                <p class="intro-text">Selam dostum! Benim adım Esat Can. Uzun yıllar boyunca dünyanın dört bir yanını, orijinal "fakir sırt çantalı gezgin" olarak, günde sadece 10 dolarla gezdim.<br><br>Bugün ise bu site, masa başı işlerini bırakıp gerçek, samimi ve anlamlı maceraların peşine düşmek isteyen macera tutkunları için nihai bütçe dostu seyahat kaynağıdır…</p>
+                <div class="intro-buttons">
+                    <a href="#" class="btn-story">Hikayem</a>
+                    <a href="#" class="btn-lessons">Yolculuğumdan Dersler</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="planner-section" style="background-image: url('assets/div3.svg');">
+            <div class="planner-overlay"></div>
+            <div class="planner-content">
+                <h2>Senin için en iyi seyahat planlayıcısıyım!</h2>
+                <p>Tatilini planlarken bilmen gereken her şeyi bana sorabilirsin—hayal gibi destinasyonlardan huzurlu konaklamalara, uçuşlardan yolculuklara kadar her konuda yardımcı olurum. Seyahat planlama şekfin tamamen değişecek. Artık yüzlerce sekme ve uygulama arasında kaybolmayı unut; ihtiyacın olan tek seyahat planlayıcısı benim. Kişiye özel destinasyon önerileri için benimle iletişime geç. Son olarak, değerli tatil günlerinden en iyi şekilde yararlanmak için kendi seyahat planını özelleştir!</p>
+                <a href="#" class="btn-planner">Yeni bir seyahat oluştur</a>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-left">
+                <h2>Başkaları ne soruyor</h2>
+                <p>Benden herhangi bir destinasyon için öneri isteyebilir ya da komple bir gezi planı talep edebilirsin.</p>
+            </div>
+            <div class="faq-right">
+                <img src="assets/div4a.svg" alt="Decoration" class="faq-decor-top">
+                <img src="assets/div4b.svg" alt="Decoration" class="faq-decor-bottom">
+                <div class="suggestions">
+                    <a href="destinations/tayland/bangkok.html" class="suggestion-item">
+                        <img src="assets/messages-bubble.svg" alt="Message" class="suggestion-icon">
+                        Bangkok’un en iyi backpacker hostelleri
+                    </a>
+                    <a href="destinations/tayland/phuket.html" class="suggestion-item">
+                        <img src="assets/messages-bubble.svg" alt="Message" class="suggestion-icon">
+                        Phuket’te uygun fiyatlı hosteller
+                    </a>
+                    <a href="destinations/indonesia/sumatra.html" class="suggestion-item">
+                        <img src="assets/messages-bubble.svg" alt="Message" class="suggestion-icon">
+                        Sumatra’da doğa ve macera dolu ucuz konaklama
+                    </a>
+                    <a href="destinations/vietnam/hanoi.html" class="suggestion-item">
+                        <img src="assets/messages-bubble.svg" alt="Message" class="suggestion-icon">
+                        Hanoi’de sosyal butik hosteller
+                    </a>
+                    <a href="destinations/laos/laos.html" class="suggestion-item">
+                        <img src="assets/messages-bubble.svg" alt="Message" class="suggestion-icon">
+                        Laos’un kalbinde geleneksel kültürle iç içe anlamlı bir deneyim
+                    </a>
+                    <a href="destinations/indonesia/ubud.html" class="suggestion-item">
+                        <img src="assets/messages-bubble.svg" alt="Message" class="suggestion-icon">
+                        Ubud’da doğayla iç içeri hosteller
+                    </a>
+                    <a href="destinations/indonesia/flores.html" class="suggestion-item">
+                        <img src="assets/messages-bubble.svg" alt="Message" class="suggestion-icon">
+                        Flores’te doğa, köyler ve kültürel keşifler
+                    </a>
+                    <a href="destinations/malaysia/penang.html" class="suggestion-item">
+                        <img src="assets/messages-bubble.svg" alt="Message" class="suggestion-icon">
+                        Penang’de şehir kültürüyle harmanlanmış uygun fiyatlı hostel önerileri
+                    </a>
+                </div>
+                <a href="blog/index.html" class="ask-me-btn">Bana sor</a>
+            </div>
+        </div>
+
+        <div class="manifesto-section">
+            <div class="manifesto-left" style="background-image: url('assets/div5bg.svg');">
+                <div class="manifesto-overlay"></div>
+                <img src="assets/div5a.svg" alt="Decoration" class="manifesto-decor">
+                <div class="manifesto-content">
+                    <h2 class="manifesto-title">Manifesto</h2>
+                    <p class="manifesto-teaser">Devamını gör...</p>
+                    <div class="manifesto-description">
+                        <p>Efsane Bir Gezgin ve Unutulmaz Bir İnsan Olmanın Yolu</p>
+                        <p>Seyahat sadece bir tatil aracı olmak zorunda değil; aslında kişisel gelişim ve dönüşüm için sahip olabileceğin en büyük fırsatlardan biri. Ama bu potansiyeli kullanmak senin elinde.</p>
+                        <p>Cesur ol ve iyi kal. Konfor alanının dışına çık. Seni korkutan şeyleri dene. Ve ne zaman kendini yorgun, eve özlem duyar halde ya da “Neden yapıyorum ben bunu?” diye sorgularken bulursan, Esat Can Travel'ın manifestosunu tekrar oku. Dünya, senin için keşfedilmeyi bekleyen harika şeylerle dolu.</p>
+                    </div>
+                    <a href="manifesto.html" class="manifesto-btn">Manifestomu oku</a>
+                </div>
+            </div>
+            <div class="manifesto-right" style="background-image: url('assets/div5.svg');">
+                <div class="manifesto-overlay"></div>
+                <div class="manifesto-right-content">
+                    <h2>Popüler Yazılar</h2>
+                    <ul class="popular-posts">
+                        <li><span class="bullet">•</span> <a href="blog/ucuz-ucak-bileti-nasil-bulunur.html">Ucuz Uçak Bileti Nasıl Bulunur</a></li>
+                        <li><span class="bullet">•</span> <a href="blog/ucuz-konaklama-nasil-bulunur.html">Ucuz Konaklama Nasıl Bulunur</a></li>
+                        <li><span class="bullet">•</span> <a href="blog/sirt-cantasi-nasil-secilir.html">Sırt Çantası Nasıl Seçilir</a></li>
+                        <li><span class="bullet">•</span> <a href="blog/seyahat-planlamak-icin-16-adim.html">Seyahat Planlamak İçin 16 Adım</a></li>
+                        <li><span class="bullet">•</span> <a href="blog/en-kapsamli-paketleme-rehberim.html">En Kapsamlı Paketleme Rehberim</a></li>
+                        <li><span class="bullet">•</span> <a href="blog/seyahat-sigortasi-nasil-alinir.html">Seyahat Sigortası Nasıl Alınır</a></li>
+                        <li><span class="bullet">•</span> <a href="blog/yeni-gezginler-icin-11-ipucu.html">Yeni Gezginler İçin 11 İpucu</a></li>
+                        <li><span class="bullet">•</span> <a href="blog/favori-hostellerim.html">Favori Hostellerim</a></li>
+                        <li><span class="bullet">•</span> <a href="blog/yalniz-seyahat-eden-kadinlar-icin-ipuclari.html">Yalnız Seyahat Eden Kadınlar İçin İpuçları</a></li>
+                        <li><span class="bullet">•</span> <a href="blog/dogru-seyahat-kredi-karti-nasil-secilir.html">Doğru Seyahat Kredi Kartı Nasıl Seçilir</a></li>
+                        <li><span class="bullet">•</span> <a href="blog/uzak-durulmasi-gereken-14-seyahat-dolandiriciligi.html">Uzak Durulması Gereken 14 Seyahat Dolandırıcılığı</a></li>
+                        <li><span class="bullet">•</span> <a href="blog/yurt-disinda-calismanin-15-yolu.html">Yurt Dışında Çalışmanın 15 Yolu</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-section" style="background-image: url('assets/div6.svg');">
+            <div class="course-overlay"></div>
+            <div class="course-content">
+                <h2><strong>Süperstar Blog Yazarlığı Kursu</strong></h2>
+                <h3><strong>Esat Can Travel ile blog dünyasında fark yaratmaya hazır mısın?</strong></h3>
+                <p>Bu program sayesinde şunları öğreneceksin:</p>
+                <ul>
+                    <li><strong>Strateji geliştirmeyi</strong> – Blog yazarlığına nasıl başladığımı, 10 yılı aşkın sürede edindiğim dersleri ve seni diğerlerinden ayıracak temel prensipleri öğrenerek, okuyucularına daha iyi nasıl hizmet edebileceğini kavrayacaksın.</li>
+                    <li><strong>Teknik konularda ustalaşmayı</strong> – “Ben teknolojiyle aram iyi değil” bahanesi artık tarih! Ben ve ekibim, adım adım rehberlerle seni teknik konularda yetkin bir hale getireceğiz.</li>
+                    <li><strong>Unutulmaz bir marka yaratmayı</strong> – İnsanların seni hatırlayacağı, sıradanlıktan sıyrılan ve ziyaretçileri sadık takipçilere dönüştüren bir marka nasıl kurulur, hepsini anlatacağım.</li>
+                    <li><strong>İnsanların okumak ve paylaşmak isteyeceği içerikler yazmayı</strong> – Gerçek örneklerle, okuyucunun ilgisini çeken ve sosyal medyada yayılacak hikâyeler yazmayı adım adım öğreneceksin.</li>
+                    <li><strong>Arama motorlarında üst sıralara çıkmayı</strong> – 500.000’den fazla anahtar kelimede nasıl üst sıralarda yer aldığımızı, rakiplerini nasıl geçebileceğini ve Google’da ilk sayfada nasıl görüneceğini açıklıyorum.</li>
+                    <li><strong>Sosyal medyada fark yaratmayı</strong> – Takipçi sayını artırmak, diğer içerik üreticilerle iş birliği yapmak ve sosyal medyayı etkili kullanmak için kullandığım özel taktikleri, mesaj şablonlarını ve yöntemleri seninle paylaşıyorum.</li>
+                    <li><strong>Basında yer almayı</strong> – Büyük medya kuruluşlarında nasıl yer bulacağının sırlarını, gazetecilerin maillerine nasıl cevap verdiklerini ve dikkat çekici basın ilişkileri kurmanın yollarını gösteriyorum.</li>
+                    <li><strong>E-posta listeni büyütmeyi</strong> – E-posta, takipçilerinle güçlü bağ kurmanın en etkili yolu. Benim kullandığım gizli tüyolar ve ipuçlarıyla e-posta listeni nasıl büyüteceğini öğreneceksin.</li>
+                    <li><strong>Kendi gelirini oluşturmayı</strong> – Nerede olursan ol, internetten gelir elde edebilmen için kullandığım tüm yöntemleri (affiliates, ürün satışı, danışmanlık) adım adım açıklıyorum. Tüm süreçler şeffaf ve uygulanabilir şekilde seninle.</li>
+                </ul>
+                <p class="highlight"><strong>Detaylı müfredata göz atmak ister misin?</strong></p>
+                <p class="highlight"><strong>Hazırsan, bu yolculuk şimdi başlıyor!</strong></p>
+                <button class="join-course-btn" onclick="openSignupPopup()">Programa hemen katıl ve kendi blog efsaneni yarat!</button>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="assets/logowhite.svg" alt="Esat Can Travel Logo">
+                </div>
+                <div class="footer-links">
+                    <h3>Bağlantılar</h3>
+                    <ul>
+                        <li><a href="index.html">Anasayfa</a></li>
+                        <li><a href="blog/index.html">Blog</a></li>
+                        <li><a href="destinasyonlar/index.html">Destinasyonlar</a></li>
+                        <li><a href="seyahat-ekipmani/index.html">Seyahat Ekipmanı</a></li>
+                        <li><a href="kaynaklar/index.html">Kaynaklar</a></li>
+                        <li><a href="kurslar/index.html">Kurslar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Bizi Takip Et</h3>
+                    <a href="https://instagram.com/esat.can"><img src="assets/instagram-white.svg" alt="Instagram"></a>
+                    <a href="https://x.com/esatcaan"><img src="assets/twitter-white.svg" alt="Twitter"></a>
+                    <a href="https://facebook.com/esatcann"><img src="assets/facebook-white.svg" alt="Facebook"></a>
+                </div>
+                <div class="footer-contact">
+                    <h3>İletişim</h3>
+                    <p>E-posta: <a href="mailto:info@esatcantravel.com">info@esatcantravel.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Esat Can Travel. Tüm hakları saklıdır.</p>
+            </div>
+        </footer>
+
+        <div class="signup-popup" id="signupPopup" style="background: linear-gradient(135deg, #F2D7B2, #288616), url('assets/div6topup.svg') no-repeat center center / cover; background-blend-mode: overlay;">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closeSignupPopup()">×</span>
+                <h2>Programa Katıl</h2>
+                <p>Blog efsaneni yaratmak için ilk adımı at!</p>
+                <form class="signup-form">
+                    <input type="text" placeholder="Adınız" required>
+                    <input type="email" placeholder="E-postanız" required>
+                    <button type="submit">Katıl</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+</html>
